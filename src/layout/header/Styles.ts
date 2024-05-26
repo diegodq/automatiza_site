@@ -11,5 +11,6 @@ export const Container = styled.header`
    @media (max-width: 840px) {
       justify-content: space-between;
       padding: 0 30px;
+      z-index: 4;
    }
 `;

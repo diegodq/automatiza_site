@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const Div = styled.div`
    max-width: 600px;
    margin:0 auto;
-   
+
    @media (max-width: 650px) {
       display: flex;
       flex-direction: column;
@@ -39,6 +39,7 @@ export const PurchaseButton = styled.a`
 
    @media (max-width: 650px) {
       margin-bottom: 20px;
+      margin-right: 0;
    }
 
    &:hover {

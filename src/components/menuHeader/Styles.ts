@@ -11,10 +11,10 @@ export const Nav = styled.nav`
       height: 100vh;
       width: 270px;
       color: #F2F2F2;
-      z-index: 1;
+      z-index: 9999;
    }
 
-   &.active 
+   &.active
     {
       right: 0;
     }
