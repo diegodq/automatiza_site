@@ -39,6 +39,6 @@ export const ReadMoreButtonModal = styled.button`
    border: 1px solid red;
    font: 1rem bahnschriftRegular, sans-serif;
    cursor: pointer;
-   padding: 3px 10px;
+   padding: 9px 12px;
    margin-top: 15px;
 `;
