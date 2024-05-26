@@ -22,6 +22,10 @@ export const DivModalObjects = styled.div`
    background-color: rgb(0,0,0, 0.5);
    width: 490px;
    padding: 20px;
+
+   @media (max-width: 570px) {
+      width: 280px;
+   }
 `;
 
 export const TitleTextModal = styled.h3`
