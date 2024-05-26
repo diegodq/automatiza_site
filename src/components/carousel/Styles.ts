@@ -20,12 +20,13 @@ export const DivModalObjects = styled.div`
    left: 20px;
    color: white;
    background-color: rgb(0,0,0, 0.5);
-   padding: 15px 20px;
-   max-width: 650px;
+   width: 490px;
+   padding: 20px;
 `;
 
 export const TitleTextModal = styled.h3`
    font: 1.4rem bahnschriftRegular, sans-serif;
+
 `;
 
 export const TextModal = styled.p`
@@ -34,9 +35,9 @@ export const TextModal = styled.p`
 `;
 
 export const ReadMoreButtonModal = styled.button`
-   background-color: red;
+   background-color: blue;
    color: white;
-   border: 1px solid red;
+   border: 0;
    font: 1rem bahnschriftRegular, sans-serif;
    cursor: pointer;
    padding: 9px 12px;
