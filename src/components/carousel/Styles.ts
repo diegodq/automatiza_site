@@ -4,7 +4,6 @@ export const Container = styled.div`
 
 `;
 
-
 export const ImgOne = styled.img`
    width: 100%;
    height: 570px;
@@ -37,14 +36,4 @@ export const TitleTextModal = styled.h3`
 export const TextModal = styled.p`
    font: 1.1rem bahnschriftRegular, sans-serif;
    margin-top: 10px;
-`;
-
-export const ReadMoreButtonModal = styled.button`
-   background-color: blue;
-   color: white;
-   border: 0;
-   font: 1rem bahnschriftRegular, sans-serif;
-   cursor: pointer;
-   padding: 9px 12px;
-   margin-top: 15px;
 `;
