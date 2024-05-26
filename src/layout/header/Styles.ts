@@ -6,7 +6,7 @@ export const Container = styled.header`
    display: flex;
    justify-content: space-around;
    align-items: center;
-   border-bottom: 1px solid #3D194F;
+   border-bottom: 2px solid #3D194F;
 
    @media (max-width: 840px) {
       justify-content: space-between;

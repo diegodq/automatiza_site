@@ -36,7 +36,7 @@ export const Box = styled.div`
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   
+
    &:hover {
       box-shadow: 0 0 5px #878787;
       transition: .2s ease-in-out;
