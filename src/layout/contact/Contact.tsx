@@ -6,7 +6,9 @@ const Contact: React.FC = (): ReactElement => {
    return (
       <Container id="contact">
          <TitleSection>CONTATE-NOS</TitleSection>
-         <SubTitleSection>Nós apreciamos sua visita e estamos sempre aqui para ajudá-lo. Se você tiver alguma proposta, dúvida, problema ou qualquer outra questão, por favor, não hesite em nos contatar.</SubTitleSection>
+         <SubTitleSection>Nós apreciamos sua visita e estamos sempre aqui para ajudá-lo.
+         Se você tiver alguma proposta, dúvida, problema ou qualquer outra questão,
+         por favor, não hesite em nos contatar.</SubTitleSection>
 
          <ContactForm />
       </Container>
