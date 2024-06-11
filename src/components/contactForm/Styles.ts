@@ -16,13 +16,26 @@ export const Input = styled.input`
    border: 2px solid #bfbfbf;
    font: .9rem bahnschriftRegular, sans-serif;
    padding-left: 10px;
-   
-   & + & {
-      margin-top:20px;
+
+   &.input_error {
+    border: 2px solid red;
    }
 `;
 
-export const SubmitButton = styled.input`
+export const ErrorMessage = styled.p`
+  font: .9rem bahnschriftRegular, sans-serif;
+  color: red;
+  margin-top: 7px;
+`;
+
+export const DivInput = styled.div`
+ & + & {
+      margin-top:20px;
+   }
+
+`;
+
+export const SubmitButton = styled.button`
    padding: 15px 50px;
    cursor: pointer;
    background-color: #F2F2F2;
@@ -46,8 +59,11 @@ export const TextArea = styled.textarea`
    outline: none;
    resize: none;
    border: 2px solid #bfbfbf;
-   margin-top: 20px;
    font: .9rem bahnschriftRegular, sans-serif;
    padding-left: 10px;
    padding-top: 5px;
+
+   &.text_area_error {
+    border: 2px solid red;
+   }
 `;

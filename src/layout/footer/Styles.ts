@@ -36,7 +36,7 @@ export const DivTitle = styled.h4`
 `;
 
 export const LogoFooter = styled.img`
-   height: 65px;
+   height: 80px;
    display: block;
    margin: 0 auto;
 `;
@@ -73,7 +73,7 @@ export const LiInformation = styled.li`
       display: flex;
       justify-content: center;
    }
-   
+
    & + & {
       margin-top: 10px;
    }
@@ -91,7 +91,7 @@ export const LinkSocial = styled.a`
    font-size: 30px;
    text-decoration: none;
    color: #fff;
-   
+
    & + & {
       margin-left: 20px;
    }

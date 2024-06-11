@@ -7,7 +7,7 @@ import {FaFacebook} from 'react-icons/fa';
 import {AiFillInstagram} from 'react-icons/ai';
 import { FaLinkedin } from 'react-icons/fa';
 
-import LogoWhite from '/assets/images/logo-white.svg';
+import LogoWhite from '/assets/images/logo-white2.png';
 
 const Footer: React.FC = (): ReactElement => {
    return (
