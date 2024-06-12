@@ -14,3 +14,17 @@ export const Container = styled.header`
       z-index: 4;
    }
 `;
+
+export const DivLogo = styled.a`
+  background-color: white;
+  position: absolute;
+  top: 45px;
+  left: 8px;
+  border-radius: 5px;
+  z-index: 900;
+  box-shadow: 0 0 15px black;
+`;
+
+export const LogoImg = styled.img`
+  height: 140px;
+`;

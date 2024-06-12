@@ -1,8 +1,8 @@
 import React, {ReactElement, useState} from 'react';
-import { Container } from './Styles';
-import Logo from '../../components/logo/Logo';
+import { Container, DivLogo, LogoImg } from './Styles';
 import MenuIcon from '../../components/menuIcon/MenuIcon';
 import MenuHeader from '../../components/menuHeader/MenuHeader';
+import LogoHeaderSite from '/assets/images/logo2.svg';
 
 type FunctionType = {
    (): void
@@ -17,9 +17,12 @@ const Header: React.FC = (): ReactElement => {
 
    return (
       <Container>
-         <Logo />
-         <MenuHeader isActive={isActive} toggleActive={toggleActive} />
-         <MenuIcon toggleActive={toggleActive} />
+        <DivLogo href='/'>
+          <LogoImg src={LogoHeaderSite} />
+        </DivLogo>
+
+        <MenuHeader isActive={isActive} toggleActive={toggleActive} />
+        <MenuIcon toggleActive={toggleActive} />
       </Container>
    )
 }
