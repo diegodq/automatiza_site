@@ -53,7 +53,7 @@ const Solutions: React.FC = (): ReactElement => {
                   <ReadMoreButton onClick={() => openModalHandler('npsModal')}>Saiba mais<FaChevronRightIcon /> </ReadMoreButton>
 
                   <Modal isOpen={openModal === 'npsModal'} onClose={closeModalHandler}>
-                     <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>PESQUISA DE SATISFAÇÃO - NPS</h1>
+                     <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>Pesquisa de Satisfação - NPS</h1>
                      <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>A Automatiza Fácil, pensando no fortalecimento contínuo da sua marca desenvolveu uma aplicação que ouve o seu cliente. Assim como você, nos da Automatiza Fácil também sabemos a importância da informação no dia a dia.</p>
                      <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Conhecer o nosso cliente, o que ele pensa de nós e como está sendo sua experiência com os nossos produtos e serviços é de indiscutível relevância. Além de nos diferenciar dos nossos concorrentes também permite um melhor relacionamento com o cliente.</p>
                      <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Quando ouvimos nossos clientes mostramos o quanto nos importamos com eles e o quanto a sua satisfação é importante para a empresa. Além dos pontos já relatados, é uma ótima estratégia para a empresa obter informações que permitam aprimorar seus produtos e serviços. Conhecer o seu cliente é fortalecer a cada dia sua marca, seus produtos e serviços.</p>
@@ -71,17 +71,43 @@ const Solutions: React.FC = (): ReactElement => {
                   <TaleDescription>O app Meu Coletor de Dados permite transformar o seu smartphone em um equipamento para a coleta de dados. Com isso, você reduz custos na automação de processos de logística interna, podendo instalar mais aparelhos, se necessário.</TaleDescription>
 
                   <Ul>
-                     <Li> <ParagraphNPS><FaCheckIcon />Conferência Física de Recebimento.</ParagraphNPS> </Li>
-                     <Li> <ParagraphNPS><FaCheckIcon />Endereçamento de Armazenagem.</ParagraphNPS> </Li>
-                     <Li> <ParagraphNPS><FaCheckIcon />Transferência de Produtos.</ParagraphNPS> </Li>
-                     <Li> <ParagraphNPS><FaCheckIcon />Separação e Expedição de Produtos.</ParagraphNPS> </Li>
-                     <Li> <ParagraphNPS><FaCheckIcon />Inventário.</ParagraphNPS> </Li>
+                     <Li> <ParagraphNPS><FaCheckIcon />Faça a contagem dos produtos através de inventários com e sem consulta.</ParagraphNPS> </Li>
+                     <Li> <ParagraphNPS><FaCheckIcon />Faça contagens dos produtos pelo tablete, celular, ou coletor de dados.</ParagraphNPS> </Li>
+                     <Li> <ParagraphNPS><FaCheckIcon />Configure o layout exigido pelo seu ERP de forma simples e dinâmico.</ParagraphNPS> </Li>
+                     <Li> <ParagraphNPS><FaCheckIcon />Layouts dinâmicos para importação e exportação.</ParagraphNPS> </Li>
+                     <Li> <ParagraphNPS><FaCheckIcon />Trabalhe com vários dispositivos em um mesmo inventário.</ParagraphNPS> </Li>
+                     <Li> <ParagraphNPS><FaCheckIcon />Adquira a licença temporária por dispositivo e pague de acordo com a sua demanda.</ParagraphNPS> </Li>
                   </Ul>
 
                   <ReadMoreButton onClick={() => openModalHandler('collectorModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
 
                   <Modal isOpen={openModal === 'collectorModal'} onClose={closeModalHandler}>
-                     Content in development
+                    <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>App coletor de Dados</h1>
+                    <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                      O app Meu Coletor de Dados permite transformar o seu smartphone em um equipamento para a coleta de dados, integrado de forma nativa aos módulos de Estoque e Custos,
+                      e de Compras e Faturamento. Com isso, você reduz custos na automação de processos de logística interna, podendo instalar mais aparelhos, se necessário.
+                    </p>
+                    <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                      O aplicativo permite acompanhar a movimentação de produtos desde a chegada até a saída dos itens. Por meio da câmera do celular,
+                      você pode bipar produtos pelo código de barra ou QR Code na etiqueta dos itens ou das caixas, facilitando a movimentação do seu estoque de itens.
+                      Desse modo, você evita processos manuais e reduz a possibilidade de erros em seus registros.
+                    </p>
+                    <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                      O app Meu Coletor de Dados permite fazer a convocação dos operadores, atribuindo tarefas e gerenciando melhor as equipes nas rotinas de logística interna.
+                      Além disso, o aplicativo também funciona em modo offline.
+                      Assim, se a conexão de internet cair, você não precisa interromper sua operação, e pode fazer a sincronização dos dados mais tarde, quando a conexão for restabelecida.
+                    </p>
+                    <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                      E caso haja algum tipo de falha na sincronização, o app emite uma notificação para o celular do usuário. Assim, você nunca fica sem as informações necessárias para sua operação.
+                    </p>
+                    <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                      O app Meu Coletor de Dados está disponível na plataforma Android e IoS proporciona mais agilidade e eficiência em processos de logística interna.
+                      A interface é simples e amigável, facilitando a rotina de operação.
+                    </p>
+                    <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                      O app Meu Coletor de Dados também proporciona alta capacidade de escala, permitindo atender operações de pequeno e grande porte.
+                      O aplicativo pode ser contratado por assinatura.
+                    </p>
                   </Modal>
                </Tale>
 
@@ -108,8 +134,7 @@ const Solutions: React.FC = (): ReactElement => {
                   <ReadMoreButton onClick={() => openModalHandler('promoterControlModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
 
                   <Modal isOpen={openModal === 'promoterControlModal'} onClose={closeModalHandler}>
-                     <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>App Coletor de
-                        Dados</h1>
+                     <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>Controle de Promotores</h1>
                      <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Um aplicativo de controle de promotores de
                         produto de supermercados é a nossa ferramenta projetada para gerenciar e otimizar o trabalho dos promotores de
                         vendas que atuam no seu estabelecimento. Esses promotores são responsáveis por diversas atividades, como
@@ -145,21 +170,41 @@ const Solutions: React.FC = (): ReactElement => {
                <Tale>
                   <TitleTale>Classificação de Produtos</TitleTale>
 
-                  <TaleDescription>Conheça o seu cliente e veja o que ele pensa da sua empresa e como está sendo a experiência com
-                     o seus produtos ou serviços.</TaleDescription>
+                  <TaleDescription>Mantenha o fiscal da sua empresa organizado e atualizado.</TaleDescription>
 
                   <Ul>
-                     <Li> <ParagraphNPS><FaCheckIcon/>Desenvolva pesquisas personalizadas para o seu negócio.</ParagraphNPS> </Li>
-                     <Li> <ParagraphNPS><FaCheckIcon/>Defina a ordem e obrigatóriedade das perguntas e respostas.</ParagraphNPS>
-                     </Li>
-                     <Li> <ParagraphNPS><FaCheckIcon/>Informações em tempo real na palma da mão.</ParagraphNPS> </Li>
-                     <Li> <ParagraphNPS><FaCheckIcon/>Acesso via QrCode</ParagraphNPS> </Li>
-                     <Li> <ParagraphNPS><FaCheckIcon/>Baixo custo de investimento e retorno garantido.</ParagraphNPS> </Li>
+                     <Li> <ParagraphNPS><FaCheckIcon/>Higienização do cadastro de produtos e Padronização da descrição dos produtos.</ParagraphNPS> </Li>
+                     <Li> <ParagraphNPS><FaCheckIcon/>Classificação Mercadológica de Produtos.</ParagraphNPS> </Li>
+                     <Li> <ParagraphNPS><FaCheckIcon/>Classificação Fiscal de Saída-Venda para consumidor final.</ParagraphNPS> </Li>
+                     <Li> <ParagraphNPS><FaCheckIcon/>Treinamento e orientações nos regime: Simples Nacional, Lucro Presumido e Lucro Real.</ParagraphNPS> </Li>
+                     <Li> <ParagraphNPS><FaCheckIcon/>Backup em Nuvem e monitoramento dos uploads dos arquivos de Backup.</ParagraphNPS> </Li>
                   </Ul>
 
                   <ReadMoreButton onClick={() => openModalHandler('dataClassificationModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
 
-                  <Modal isOpen={openModal === 'dataClassificationModal'} onClose={closeModalHandler}>Content in development</Modal>
+                  <Modal isOpen={openModal === 'dataClassificationModal'} onClose={closeModalHandler}>
+                    <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>Classificação de Produtos</h1>
+                    <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                      Um dos maiores desafios das redes varejistas do ramo de supermercados e afins é a manutenção de uma base de cadastro de produtos corretamente classificada tanto para as
+                      contribuições para o PIS e COFINS quanto em relação ao ICMS, o já tradicional imposto estadual que a dia modifica suas regras e exige atualização constante da equipe fiscal das empresas.
+                    </p>
+                    <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                      Muitas empresas não conseguem sobreviver ao primeiro ano de funcionamento, simplesmente por não entenderem bem em qual regime fiscal se encaixam e não levantarem
+                      corretamente seus tributos a recolher. Essa problemática coloca os negócios numa situação menos favorável diante dos concorrentes.
+                    </p>
+                    <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                      Uma das principais fontes de risco para a atividade empresarial é o tratamento inadequado da classificação fiscal das mercadorias. Esse risco tem duas faces: de um lado, a
+                      exacerbação do custo financeiro resultante de carga tributária maior que a devida e da sujeição a
+                      multas, e de outro lado, a perda de vantagens proporcionadas pela legislação tributária.
+                      O primeiro tipo de risco ficou agravado pela implantação do SPED.
+                    </p>
+                    <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                      A M&F Assessoria Fiscal tem por objetivo firmar uma parceria com a sua empresa oferecendo total apoio na classificação fiscal do seu mix de produtos.
+                      A assessoria começa desde o ajuste inicial de todo o mix de produtos e se fortalece no acompanhamento periódico de novos
+                      produtos cadastros. A M&F assessoria também será responsável por classificar os produtos que
+                      por novas demandas e obrigações fiscais necessitem de alterações.
+                    </p>
+                  </Modal>
                </Tale>
 
                <Badge>Em desenvolvimento</Badge>
