@@ -15,16 +15,10 @@ export const Container = styled.header`
    }
 `;
 
-export const DivLogo = styled.a`
-  background-color: white;
-  position: absolute;
-  top: 45px;
-  left: 8px;
-  border-radius: 5px;
-  z-index: 900;
-  box-shadow: 0 0 15px black;
+export const LogoImg = styled.img`
+  height: 60px;
 `;
 
-export const LogoImg = styled.img`
-  height: 140px;
+export const Link = styled.a`
+
 `;
