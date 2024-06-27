@@ -7,6 +7,9 @@ export const Container = styled.header`
    justify-content: space-around;
    align-items: center;
    border-bottom: 2px solid #3D194F;
+   position: sticky;
+   top: 0;
+   z-index: 99;
 
    @media (max-width: 840px) {
       justify-content: space-between;
