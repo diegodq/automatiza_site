@@ -85,6 +85,7 @@ export const ReadMoreButton = styled.button`
   background-color: #FFFFFF;
   border: 0;
   cursor: pointer;
+  display: flex;
 
   &:hover {
     color: red;
@@ -97,6 +98,7 @@ export const AddToKartButton = styled.button`
   background-color: #FFFFFF;
   border: 0;
   cursor: pointer;
+  display: flex;
 
   &:hover {
     color: red;
@@ -115,7 +117,10 @@ export const Badge = styled.span`
 `;
 
 export const DivButtons = styled.div`
-
+  display: flex;
+  justify-content: space-between;
+  max-width: 293px;
+  margin-top: 12px;
 `;
 
 // icons

@@ -85,7 +85,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={() => openModalHandler('collectorModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                <AddToKartButton>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+                {/* <AddToKartButton>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
               </DivButtons>
 
 
@@ -140,7 +140,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={() => openModalHandler('promoterControlModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                <AddToKartButton>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+                {/* <AddToKartButton>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
               </DivButtons>
 
               <Modal isOpen={openModal === 'promoterControlModal'} onClose={closeModalHandler}>
@@ -192,7 +192,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={() => openModalHandler('dataClassificationModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                <AddToKartButton>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+                {/* <AddToKartButton>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
               </DivButtons>
 
               <Modal isOpen={openModal === 'dataClassificationModal'} onClose={closeModalHandler}>
