@@ -34,6 +34,7 @@ const AboutUs: React.FC = (): ReactElement => {
           <P>Somos profissionais que acreditam que a tecnologia deve ser um aliado e não um obstáculo para o sucesso em qualquer setor. O objetivo da AUTOMATIZA FÁCIL é reduzir rotinas burocráticas e o excesso de planilhas, criando micros serviços independentes, intuitivos e autônomos, tornando o varejo simples ainda mais simples.</P>
           <ContactButton href="#contact">Contate-nos</ContactButton>
         </Div>
+
         <DivVideo>
           <ImgVideo src={backgroundVideo} />
           <ButtonPlay  onClick={() => openModalHandler('institutionalVideo')}>
@@ -41,7 +42,7 @@ const AboutUs: React.FC = (): ReactElement => {
           </ButtonPlay>
 
           <Modal isOpen={openModal === 'institutionalVideo'} onClose={closeModalHandler}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/F4ucXpi8uQQ?si=sG9p9feoQYRifKRZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/F4ucXpi8uQQ?si=sG9p9feoQYRifKRZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </Modal>
         </DivVideo>
       </DivAboutUs>

@@ -14,7 +14,11 @@ export const RiShoppingCart2FillIcons = styled(RiShoppingCart2Fill)`
   font-size: 35px;
 `;
 
-export const DivProducts = styled.div`
+export const ProductsDetails = styled.div`
+
+`;
+
+export const DivPrice = styled.div`
   border: 1px solid grey;
   display: flex;
   flex-direction: column;
@@ -62,23 +66,6 @@ export const TotalText = styled.span`
 
 export const Total = styled.span`
   font: 1.1rem bahnschriftRegular, sans-serif;
-`;
-
-export const SubTotalText = styled.span`
-  font: 1.1rem bahnschriftRegular, sans-serif;
-`;
-
-export const SubTotal = styled.span`
-  font: 1rem bahnschriftRegular, sans-serif;
-`;
-
-export const DivSubTotal = styled.div`
-  font: 1.1rem bahnschriftRegular, sans-serif;
-  border-bottom: 1px solid grey;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  width: 230px;
 `;
 
 export const DivTotal = styled.div`

@@ -1,7 +1,8 @@
 import { ReactElement } from "react";
 import { Container, NumberProducts, RiShoppingCart2FillIcons,
-  ProductsKart, TitleKart, PurchaseButton, DivProducts, DivPurchaseButton,
-  DivTotal, DivSubTotal, Total, SubTotal, TotalText, SubTotalText } from "./Styles";
+  ProductsKart, TitleKart, PurchaseButton, DivPrice, DivPurchaseButton,
+  DivTotal, Total, TotalText,
+  ProductsDetails } from "./Styles";
 
 
 const ShoppingKart: React.FC = (): ReactElement => {
@@ -13,20 +14,20 @@ const ShoppingKart: React.FC = (): ReactElement => {
       <ProductsKart>
         <TitleKart>RESUMO DO PEDIDO</TitleKart>
 
+        <ProductsDetails>
+
+        </ProductsDetails>
+
         <DivPurchaseButton>
           <PurchaseButton>Finalizar Pedido</PurchaseButton>
         </DivPurchaseButton>
 
-        <DivProducts>
-          <DivSubTotal>
-            <SubTotalText>SUBTOTAL:</SubTotalText>
-            <SubTotal>R$ 150,00</SubTotal>
-          </DivSubTotal>
+        <DivPrice>
           <DivTotal>
             <TotalText>TOTAL:</TotalText>
             <Total>R$ 150,00</Total>
           </DivTotal>
-        </DivProducts>
+        </DivPrice>
       </ProductsKart>
     </Container>
   )

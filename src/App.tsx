@@ -1,4 +1,4 @@
-import React, {ReactElement} from 'react';
+import React, { ReactElement } from 'react';
 import Header from './layout/header/Header.tsx';
 import UpHeader from "./layout/upHeader/UpHeader.tsx";
 import AboutTools from './layout/aboutTools/AboutTools.tsx';
@@ -13,22 +13,22 @@ import AboutUs from './layout/aboutUs/AboutUs.tsx';
 import Carousel from './components/carousel/Carousel.tsx';
 
 const App: React.FC = (): ReactElement => {
-   return (
-      <>
-         <UpHeader />
-         <Header />
-         <Carousel />
-         <AboutTools />
-         <AboutUs />
-         <Solutions />
-         <Purchase />
-         <Statistic />
-         <Clients />
-         <Contact />
-         <Footer />
-         <CopyRight />
-      </>
-   )
+  return (
+    <>
+      <UpHeader />
+      <Header />
+      <Carousel />
+      <AboutTools />
+      <AboutUs />
+      <Solutions />
+      <Purchase />
+      <Statistic />
+      <Clients />
+      <Contact />
+      <Footer />
+      <CopyRight />
+    </>
+  )
 }
 
 export default App;
