@@ -3,7 +3,7 @@ import { LogoSite, Link } from './Styles';
 import LogoHeaderSite from '/assets/images/logo2.svg';
 
 const Logo: React.FC = (): ReactElement => {
-   return <Link href='/'> <LogoSite src={LogoHeaderSite} /> </Link>
+  return <Link href='/'> <LogoSite src={LogoHeaderSite} /> </Link>
 }
 
 export default Logo;

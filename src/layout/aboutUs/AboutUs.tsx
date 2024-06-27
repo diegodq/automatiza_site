@@ -42,7 +42,7 @@ const AboutUs: React.FC = (): ReactElement => {
           </ButtonPlay>
 
           <Modal isOpen={openModal === 'institutionalVideo'} onClose={closeModalHandler}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/F4ucXpi8uQQ?si=sG9p9feoQYRifKRZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/F4ucXpi8uQQ?si=sG9p9feoQYRifKRZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Modal>
         </DivVideo>
       </DivAboutUs>
