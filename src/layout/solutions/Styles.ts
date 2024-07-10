@@ -80,6 +80,10 @@ export const Li = styled.li`
   align-items: center;
 `;
 
+export const Price = styled.span`
+  
+`;
+
 export const ReadMoreButton = styled.button`
   font: bold 1rem bahnschriftRegular, sans-serif;
   background-color: #FFFFFF;
