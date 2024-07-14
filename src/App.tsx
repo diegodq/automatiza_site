@@ -14,7 +14,7 @@ import Carousel from './components/carousel/index.tsx';
 import ModalMessage from './components/modalMessage/index.tsx';
 
 type openModalType = {
-  (modalName: string): void
+  (modalName: string, message: string): void
 }
 
 type CloseModal = {
@@ -23,9 +23,12 @@ type CloseModal = {
 
 const App: React.FC = (): ReactElement => {
   const[openModal, setOpenModal] = useState<string | null>(null);
+  const[modalMessage, setModalMessage] = useState<string>('');
 
-  const openModalHandler: openModalType = (modalName: string): void => {
+  const openModalHandler: openModalType = (modalName: string, message: string): void => {
     setOpenModal(modalName);
+    setModalMessage(message);
+
   }
 
   const closeModalHandler: CloseModal = (): void => {
@@ -38,7 +41,7 @@ const App: React.FC = (): ReactElement => {
     listLinks.forEach(link => {
       link.addEventListener('click', (event)=> {
         event.preventDefault();
-        openModalHandler('modalMessage');
+        openModalHandler('modalMessage', 'Aguarde. Em breve nossas redes sociais estarão funcionando.');
       })
     });
   }, []);
@@ -58,9 +61,7 @@ const App: React.FC = (): ReactElement => {
       <Footer />
       <CopyRight />
 
-      <ModalMessage isOpen={openModal === 'modalMessage'} onClose={closeModalHandler}>
-        Aguarde. Dentro de alguns dias nossas redes sociais estarão funcionando.
-      </ModalMessage>
+      <ModalMessage isOpen={openModal === 'modalMessage'} onClose={closeModalHandler} message={modalMessage} />
     </>
   )
 }

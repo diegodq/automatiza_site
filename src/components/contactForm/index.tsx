@@ -17,7 +17,7 @@ type HandleKeyUpType = {
 }
 
 type OpenModalType = {
-  (modalName: string): void;
+  (modalName: string, message: string): void;
 }
 
 type CloseModal = {
@@ -27,9 +27,11 @@ type CloseModal = {
 const ContactForm: React.FC = (): ReactElement => {
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
   const [openModal, setOpenModal] = useState<string | null>(null);
+  const [modalMessage, setModalMessage] = useState<string>('');
 
-  const openModalHandler: OpenModalType = (modalName: string): void => {
+  const openModalHandler: OpenModalType = (modalName: string, message: string): void => {
     setOpenModal(modalName);
+    setModalMessage(message);
   }
 
   const closeModalHandler: CloseModal = (): void => {
@@ -60,8 +62,8 @@ const ContactForm: React.FC = (): ReactElement => {
       body: JSON.stringify(data),
     })
     .then(response => response.json())
-    .then(() => openModalHandler('contactModalMessage'))
-    .catch(error => console.log(error));
+    .then(() => openModalHandler('contactModalMessage', 'Sua mensagem foi enviada e responderemos o mais breve possível.'))
+    .catch(() => openModalHandler('contactModalMessage', 'Algo de errado aconteceu. Por favor, tente mais tarde.'));
   }
 
   return (
@@ -92,9 +94,7 @@ const ContactForm: React.FC = (): ReactElement => {
 
       <SubmitButton type='submit'>Enviar</SubmitButton>
 
-      <ModalMessage isOpen={openModal === 'contactModalMessage'} onClose={closeModalHandler}>
-        Sua mensagem foi enviada e responderemos o mais breve possível.
-      </ModalMessage>
+      <ModalMessage isOpen={openModal === 'contactModalMessage'} onClose={closeModalHandler} message={modalMessage} />
     </Form>
   )
 }

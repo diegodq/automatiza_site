@@ -1,13 +1,13 @@
-import React, {ReactElement, useEffect} from 'react';
+import React, {ReactElement, ReactNode, useEffect} from 'react';
 import { ModalBackground, ModalContent, ModalText, CloseButton } from './styles';
 
 type ModalProps = {
+  children: ReactNode;
   onClose: () => void;
   isOpen: boolean;
-  message: string;
 }
 
-const ModalMessage: React.FC<ModalProps> = ({ onClose, isOpen, message }: ModalProps): ReactElement | null => {
+const ModalMessageError: React.FC<ModalProps> = ({ children, onClose, isOpen }: ModalProps): ReactElement | null => {
   useEffect(() => {
     if(isOpen) {
       document.body.style.overflow = 'hidden';
@@ -26,7 +26,7 @@ const ModalMessage: React.FC<ModalProps> = ({ onClose, isOpen, message }: ModalP
       <ModalBackground>
         <ModalContent>
           <ModalText>
-            { message }
+            { children }
           </ModalText>
           <CloseButton onClick={onClose}>OK</CloseButton>
         </ModalContent>
@@ -37,4 +37,4 @@ const ModalMessage: React.FC<ModalProps> = ({ onClose, isOpen, message }: ModalP
   return null;
 }
 
-export default ModalMessage;
+export default ModalMessageError;
