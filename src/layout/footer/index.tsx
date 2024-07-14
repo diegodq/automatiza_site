@@ -15,7 +15,6 @@ const Footer: React.FC = (): ReactElement => {
     listLinks.forEach(link => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
-        console.log('Aguarde. Dentro de alguns alguns dias nossas redes sociais estarão funcionando.');
       });
     });
   }, []);
