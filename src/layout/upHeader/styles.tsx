@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
 import { Container, SocialMedia, Link, MailTo, Phone, Address, MdLocationPinIcon, FaPhoneAltIcon,
-   IoMdMailOpenIcon, Ul, Li } from './Styles';
+   IoMdMailOpenIcon, Ul, Li } from '.';
 import {FaFacebook, FaLinkedin} from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
@@ -14,9 +14,9 @@ const UpHeader: React.FC = (): ReactElement => {
       </Ul>
 
       <SocialMedia>
-        <Link target='blank' href='#'><FaFacebook /></Link>
-        <Link target='blank' href='#'><AiFillInstagram /></Link>
-        <Link target='blank' href='#'><FaLinkedin /></Link>
+        <Link className='linksSocial' target='_blank' href='#'><FaFacebook /></Link>
+        <Link className='linksSocial' target='_blank' href='#'><AiFillInstagram /></Link>
+        <Link className='linksSocial' target='_blank' href='#'><FaLinkedin /></Link>
       </SocialMedia>
     </Container>
   )

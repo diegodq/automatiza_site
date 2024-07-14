@@ -1,7 +1,7 @@
 import React, {ReactElement} from 'react';
 import { Container, TitleSection, Div, Box, TitleBox, Description,
    CircleIcon, IoMdCheckmarkCircleIcon, TbPackagesIcon,FaLightbulbIcon,
-   GrServicesIcon, FaMoneyBill1WaveIcon, FaClockIcon} from './Styles';
+   GrServicesIcon, FaMoneyBill1WaveIcon, FaClockIcon} from './styles';
 
 const AboutTools: React.FC = (): ReactElement => {
   return (

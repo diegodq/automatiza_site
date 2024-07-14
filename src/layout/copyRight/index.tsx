@@ -1,4 +1,4 @@
-import {Container, TitleSection} from './Styles.ts';
+import {Container, TitleSection} from './styles.ts';
 import React, {ReactElement} from 'react';
 
 const CopyRight: React.FC = (): ReactElement => {

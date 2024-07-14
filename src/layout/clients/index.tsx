@@ -1,5 +1,5 @@
 import React, {ReactElement} from 'react';
-import {Container, TitleSection, ListImages, Images} from './Styles.ts';
+import {Container, TitleSection, ListImages, Images} from './styles.ts';
 
 const imgOne = '/assets/images/mix_atacadao.png';
 const imgTwo = '/assets/images/goncalina.png';

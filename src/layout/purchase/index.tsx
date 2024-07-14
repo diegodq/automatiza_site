@@ -1,4 +1,4 @@
-import { Container, Div, Text, PurchaseButton } from './Styles';
+import { Container, Div, Text, PurchaseButton } from './styles';
 import React, {ReactElement} from 'react';
 
 const Purchase: React.FC = (): ReactElement => {

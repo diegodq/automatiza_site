@@ -1,8 +1,8 @@
-import React, {ReactElement} from 'react';
+import React, {ReactElement, useEffect} from 'react';
 import { Container, Div, DivTitle, LogoFooter, DescriptionCompanyFooter, Ul, Nav,
    Li, LinkSocial, QuickLink,SocialDiv,Address, MailTo, Phone,
    MdLocationPinIcon, FaPhoneAltIcon, IoMdMailOpenIcon, FaChevronRightIcon,
-   UlInformation, LiInformation} from './Styles.ts'
+   UlInformation, LiInformation} from './styles.ts'
 import {FaFacebook} from 'react-icons/fa';
 import {AiFillInstagram} from 'react-icons/ai';
 import { FaLinkedin } from 'react-icons/fa';
@@ -10,15 +10,25 @@ import { FaLinkedin } from 'react-icons/fa';
 import LogoWhite from '/assets/images/logo-white2.png';
 
 const Footer: React.FC = (): ReactElement => {
+  useEffect(() => {
+    const listLinks: NodeListOf<Element> = document.querySelectorAll('.linksSocial');
+    listLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        console.log('Aguarde. Dentro de alguns alguns dias nossas redes sociais estarão funcionando.');
+      });
+    });
+  }, []);
+
   return (
     <Container>
       <Div>
         <DivTitle>Social</DivTitle>
 
         <SocialDiv>
-          <LinkSocial target='blank' href='#'> <FaFacebook /> </LinkSocial>
-          <LinkSocial target='blank' href='#'> <AiFillInstagram /> </LinkSocial>
-          <LinkSocial target='blank' href='#'> <FaLinkedin /> </LinkSocial>
+          <LinkSocial className='linksSocial' target='_blank' href='#'> <FaFacebook /> </LinkSocial>
+          <LinkSocial className='linksSocial' target='_blank' href='#'> <AiFillInstagram /> </LinkSocial>
+          <LinkSocial className='linksSocial' target='_blank' href='#'> <FaLinkedin /> </LinkSocial>
         </SocialDiv>
       </Div>
 

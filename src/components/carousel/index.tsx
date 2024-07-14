@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import {Container, ImgOne, DivModal, DivModalObjects, TitleTextModal, TextModal} from './Styles.ts';
+import {Container, ImgOne, DivModal, DivModalObjects, TitleTextModal, TextModal} from './styles.ts';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 interface Images {
@@ -24,7 +24,7 @@ const images: Images[] = [
   modalHandler: 'promoterControlModal'},
 
   {id: '4', image: '/assets/images/carousel/data_classification.jpg', title: 'Classificação de Produtos',
-  description: '', modalHandler: 'dataClassificationModal'},
+  description: 'Mantenha o fiscal da sua empresa organizado e atualizado.', modalHandler: 'dataClassificationModal'},
 ];
 
 const Carousel: React.FC = (): ReactElement => {

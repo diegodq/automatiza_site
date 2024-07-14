@@ -1,5 +1,5 @@
 import React, {ReactElement, ReactNode, useEffect} from 'react';
-import { ModalBackground, ModalContent, ModalControl, IoCloseIcon, ModalText } from './Styles';
+import { ModalBackground, ModalContent, ModalText, CloseButton } from './styles';
 
 type ModalProps = {
   children: ReactNode;
@@ -7,7 +7,7 @@ type ModalProps = {
   isOpen: boolean;
 }
 
-const Modal: React.FC<ModalProps> = ({ children, onClose, isOpen }: ModalProps): ReactElement | null => {
+const ModalMessage: React.FC<ModalProps> = ({ children, onClose, isOpen }: ModalProps): ReactElement | null => {
   useEffect(() => {
     if(isOpen) {
       document.body.style.overflow = 'hidden';
@@ -25,12 +25,10 @@ const Modal: React.FC<ModalProps> = ({ children, onClose, isOpen }: ModalProps):
     return (
       <ModalBackground>
         <ModalContent>
-          <ModalControl>
-            <IoCloseIcon onClick={onClose}>Fechar</IoCloseIcon>
-          </ModalControl>
           <ModalText>
             { children }
           </ModalText>
+          <CloseButton onClick={onClose}>OK</CloseButton>
         </ModalContent>
       </ModalBackground>
     )
@@ -39,4 +37,4 @@ const Modal: React.FC<ModalProps> = ({ children, onClose, isOpen }: ModalProps):
   return null;
 }
 
-export default Modal;
+export default ModalMessage;

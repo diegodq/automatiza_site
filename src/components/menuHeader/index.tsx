@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
-import { Nav, Ul, Li, Link, FaUserIcon } from './Styles.ts';
-import CloseMenu from '../closeMenu/CloseMenu.tsx';
+import { Nav, Ul, Li, Link, FaUserIcon } from './styles.ts';
+import CloseMenu from '../closeMenu/index.tsx';
 
 interface MenuProps {
   isActive: boolean;

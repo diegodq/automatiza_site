@@ -1,10 +1,10 @@
 import React, {ReactElement, useState} from 'react';
-import Modal from '../../components/modal/Modal.tsx';
+import Modal from '../../components/modal/index.tsx';
 
 import {Container, TitleSection, SubTitleSection, Tale, TitleTale,
    TaleDescription, TaleImg, Div, ParagraphNPS, Ul, Li, ReadMoreButton,
    FaCheckIcon, FaChevronRightIcon, DivTaleImg, Badge, DivButtons,
-   AddToKartButton} from './Styles.ts';
+   AddToKartButton} from './styles.ts';
 
 import NPSImage from '/assets/images/nps.jpg';
 import collectorImage from '/assets/images/app_coletor.jpg';

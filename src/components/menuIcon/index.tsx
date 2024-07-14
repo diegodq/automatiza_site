@@ -1,5 +1,5 @@
 import React, {ReactElement} from 'react';
-import { TbMenuDeepIcon } from './Styles.ts';
+import { TbMenuDeepIcon } from './styles.ts';
 
 interface MenuIconProps {
   toggleActive: () => void;

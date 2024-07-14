@@ -1,6 +1,6 @@
-import Modal from '../../components/modal/Modal';
+import Modal from '../../components/modal';
 import { Container, TitleSection, Div, DivAboutUs, H4, P, DivVideo, ImgVideo,
-   ButtonPlay, ContactButton, IoMdPlayIcon } from './Styles';
+   ButtonPlay, ContactButton, IoMdPlayIcon } from './styles';
 import React, {ReactElement, useState} from 'react';
 
 const backgroundVideo = '/assets/images/background_video.jpg';

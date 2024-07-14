@@ -1,4 +1,4 @@
-import {Container, TitleSection, Div, Box, StatisticNumber, Text, ButtonService, FaArrowRightIon} from './Styles.ts';
+import {Container, TitleSection, Div, Box, StatisticNumber, Text, ButtonService, FaArrowRightIon} from './styles.ts';
 import React, {ReactElement} from 'react';
 
 const Statistic: React.FC = (): ReactElement => {

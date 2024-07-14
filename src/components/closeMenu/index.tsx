@@ -1,5 +1,5 @@
 import React, {ReactElement} from 'react';
-import { IoCloseSharpIcon } from './Styles';
+import { IoCloseSharpIcon } from './styles';
 
 interface CloseProps {
   onClick: () => void;

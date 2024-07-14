@@ -27,6 +27,7 @@ export const Div = styled.div`
 export const DivVideo = styled.div`
   position: relative;
   padding: 0 18px;
+  display: none;
 
   @media (max-width: 1090px) {
     margin-top: 20px;

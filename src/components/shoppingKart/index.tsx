@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { Container, NumberProducts, RiShoppingCart2FillIcons,
   ProductsKart, TitleKart, PurchaseButton, DivPrice, DivPurchaseButton,
   DivTotal, Total, TotalText,
-  ProductsDetails } from "./Styles";
+  ProductsDetails } from "./styles";
 
 
 const ShoppingKart: React.FC = (): ReactElement => {

@@ -1,5 +1,5 @@
-import {Container, TitleSection, SubTitleSection} from './Styles.ts';
-import ContactForm from '../../components/contactForm/ContactForm.tsx';
+import {Container, TitleSection, SubTitleSection} from './styles.ts';
+import ContactForm from '../../components/contactForm/index.tsx';
 import React, {ReactElement} from 'react';
 
 const Contact: React.FC = (): ReactElement => {

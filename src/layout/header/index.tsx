@@ -1,9 +1,9 @@
 import React, {ReactElement, useState} from 'react';
-import { Container, LogoImg, Link } from './Styles';
-import MenuIcon from '../../components/menuIcon/MenuIcon';
-import MenuHeader from '../../components/menuHeader/MenuHeader';
+import { Container, LogoImg, Link } from './styles';
+import MenuIcon from '../../components/menuIcon';
+import MenuHeader from '../../components/menuHeader';
 import LogoHeaderSite from '/assets/images/logo3.svg';
-import ShoppingKart from '../../components/shoppingKart/ShoppingKart';
+import ShoppingKart from '../../components/shoppingKart';
 
 type FunctionType = {
    (): void
