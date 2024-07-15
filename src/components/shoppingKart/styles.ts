@@ -19,8 +19,37 @@ export const RiShoppingCart2FillIcons = styled(RiShoppingCart2Fill)`
   font-size: 35px;
 `;
 
-export const ProductsDetails = styled.div`
+export const ProductDetails = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 8px;
+  border-bottom: 1px solid #8a8a8a;
+`;
 
+export const DivDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ImgProduct = styled.img`
+
+`;
+
+export const TitleProduct = styled.span`
+  font: 1rem bahnschriftRegular, sans-serif;
+  color: grey;
+`;
+
+export const PriceProduct = styled.span`
+  font: 1.1rem bahnschriftRegular, sans-serif;
+`;
+
+export const RemoveProductButton = styled.button`
+  background: none;
+  border: none;
+  font: 1rem bahnschriftRegular, sans-serif;
+  color: blue;
+  cursor: pointer;
 `;
 
 export const DivPrice = styled.div`
@@ -35,6 +64,7 @@ export const DivPurchaseButton = styled.div`
   padding: 10px 0;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 `;
 
 export const PurchaseButton = styled.button`

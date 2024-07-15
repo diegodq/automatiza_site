@@ -10,7 +10,7 @@ type openModalType = {
 }
 
 type CloseModal = {
-  (): void
+  (): void;
 }
 
 const UpHeader: React.FC = (): ReactElement => {

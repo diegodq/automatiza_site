@@ -4,6 +4,7 @@ import MenuIcon from '../../components/menuIcon';
 import MenuHeader from '../../components/menuHeader';
 import LogoHeaderSite from '/assets/images/logo3.svg';
 import ShoppingKart from '../../components/shoppingKart';
+import Provider from '../../context/Provider';
 
 type FunctionType = {
    (): void
@@ -22,7 +23,9 @@ const Header: React.FC = (): ReactElement => {
         <LogoImg src={LogoHeaderSite} />
       </Link>
       <MenuHeader isActive={isActive} toggleActive={toggleActive} />
-      <ShoppingKart />
+      <Provider>
+        <ShoppingKart />
+      </Provider>
       <MenuIcon toggleActive={toggleActive} />
     </Container>
   )
