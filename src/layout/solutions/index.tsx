@@ -1,4 +1,4 @@
-import React, {ReactElement, useState} from 'react';
+import React, {ReactElement, useContext, useState} from 'react';
 import Modal from '../../components/modal/index.tsx';
 
 import {Container, TitleSection, SubTitleSection, Tale, TitleTale,
@@ -10,6 +10,7 @@ import NPSImage from '/assets/images/nps.jpg';
 import collectorImage from '/assets/images/app_coletor.jpg';
 import promoterControl from '/assets/images/promoter_control.jpg';
 import dataClassification from '/assets/images/data_classification.jpg';
+import AppContext, { MyContextType } from '../../context/appContext.tsx';
 
 type openModalType = {
   (modalName: string): void;
@@ -19,8 +20,14 @@ type CloseModal = {
   (): void;
 }
 
+type TypeAddContext = {
+  (title: string, img: string, price: string): void
+}
+
 const Solutions: React.FC = (): ReactElement => {
   const [openModal, setOpenModal] = useState<string | null>(null);
+
+  const { setProduct } = useContext<MyContextType | undefined>(AppContext);
 
   const openModalHandler: openModalType = (modalName: string): void => {
     setOpenModal(modalName);
@@ -28,6 +35,10 @@ const Solutions: React.FC = (): ReactElement => {
 
   const closeModalHandler: CloseModal = (): void => {
     setOpenModal(null);
+  }
+
+  const addContext: TypeAddContext = (title: string, imgSrc: string, price: string): void => {
+    setProduct({title, imgSrc, price});
   }
 
   return (
@@ -38,7 +49,7 @@ const Solutions: React.FC = (): ReactElement => {
       <Div>
         <DivTaleImg>
           <TaleImg src={NPSImage} />
-            <Tale>
+            <Tale >
               <TitleTale>Pesquisa de Satisfação</TitleTale>
 
               <TaleDescription>Conheça o seu cliente e veja o que ele pensa da sua empresa e como está sendo a experiência com o seus produtos ou serviços.</TaleDescription>
@@ -53,7 +64,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={() => openModalHandler('npsModal')}>Saiba mais<FaChevronRightIcon /> </ReadMoreButton>
-                <AddToKartButton>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+                <AddToKartButton onClick={() => addContext('Pesquisa de Satisfação', NPSImage, '180.00')}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
               </DivButtons>
 
               <Modal isOpen={openModal === 'npsModal'} onClose={closeModalHandler}>
@@ -85,7 +96,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={() => openModalHandler('collectorModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                {/* <AddToKartButton>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
+                {/* <AddToKartButton onClick={() => addContext('App Coletor de Dados', collectorImage, '999.00')}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
               </DivButtons>
 
 
@@ -140,7 +151,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={() => openModalHandler('promoterControlModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                {/* <AddToKartButton>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
+                {/* <AddToKartButton onClick={() => addContext('Controle de Promotores', promoterControl, '999.00')}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
               </DivButtons>
 
               <Modal isOpen={openModal === 'promoterControlModal'} onClose={closeModalHandler}>
@@ -192,7 +203,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={() => openModalHandler('dataClassificationModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                {/* <AddToKartButton>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
+                {/* <AddToKartButton onClick={() => addContext('Classificação de Produtos', dataClassification, '999.00')}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
               </DivButtons>
 
               <Modal isOpen={openModal === 'dataClassificationModal'} onClose={closeModalHandler}>

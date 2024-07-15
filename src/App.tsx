@@ -11,10 +11,11 @@ import Contact from './layout/contact/index.tsx';
 import Statistic from './layout/statistic/index.tsx';
 import AboutUs from './layout/aboutUs/index.tsx';
 import Carousel from './components/carousel/index.tsx';
+import Provider from './context/Provider.tsx';
 
 const App: React.FC = (): ReactElement => {
   return (
-    <>
+    <Provider>
       <UpHeader />
       <Header />
       <Carousel />
@@ -27,7 +28,7 @@ const App: React.FC = (): ReactElement => {
       <Contact />
       <Footer />
       <CopyRight />
-    </>
+    </Provider>
   )
 }
 
