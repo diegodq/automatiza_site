@@ -21,7 +21,7 @@ type CloseModal = {
 }
 
 type AddContext = {
-  (id: string, thumbnail: string, title: string, price: string): void;
+  (id: string, thumbnail: string, title: string, price: number): void;
 }
 
 const Solutions: React.FC = (): ReactElement => {
@@ -44,8 +44,14 @@ const Solutions: React.FC = (): ReactElement => {
     setOpenModal(null);
   }
 
-  const addContext: AddContext = (id: string, thumbnail: string, title: string, price: string): void => {
-    setProducts([{ id, thumbnail, title, price }]);
+  const addContext: AddContext = (id: string, thumbnail: string, title: string, price: number): void => {
+
+    setProducts((previousProducts) => {
+      if (previousProducts.some(product => product.id === id))
+        return previousProducts;
+
+      return [... previousProducts, { id, thumbnail, title, price }];
+    });
   }
 
   return (
@@ -71,7 +77,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={(): void => openModalHandler('npsModal')}>Saiba mais<FaChevronRightIcon /> </ReadMoreButton>
-                <AddToKartButton onClick={(): void => addContext('001','Pesquisa de Satisfação', NPSImage, '180.00')}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+                <AddToKartButton onClick={(): void => addContext('001',NPSImage, 'Pesquisa de Satisfação', 180.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
               </DivButtons>
 
               <Modal isOpen={openModal === 'npsModal'} onClose={closeModalHandler}>
@@ -103,7 +109,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={() => openModalHandler('collectorModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                {/* <AddToKartButton onClick={(): void => addContext('002','App Coletor de Dados', collectorImage, '180.00')}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
+                <AddToKartButton onClick={(): void => addContext('002',collectorImage, 'Pesquisa de Satisfação', 190.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
               </DivButtons>
 
 
@@ -158,7 +164,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={(): void => openModalHandler('promoterControlModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                {/* <AddToKartButton onClick={(): void => addContext('003','Controle de Promotores', promoterControl, '180.00')}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
+                <AddToKartButton onClick={(): void => addContext('003',promoterControl, 'Pesquisa de Satisfação', 200.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
               </DivButtons>
 
               <Modal isOpen={openModal === 'promoterControlModal'} onClose={closeModalHandler}>
@@ -210,7 +216,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={() => openModalHandler('dataClassificationModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                {/* <AddToKartButton onClick={(): void => addContext('004','Pesquisa de Satisfação', NPSImage, '180.00')}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton> */}
+                <AddToKartButton onClick={(): void => addContext('004',dataClassification, 'Pesquisa de Satisfação', 210.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
               </DivButtons>
 
               <Modal isOpen={openModal === 'dataClassificationModal'} onClose={closeModalHandler}>
