@@ -1,18 +1,18 @@
 import { ReactNode, useState } from "react";
 import AppContext from "./appContext";
 import { MyContextType } from "./appContext";
-import { ProductsType } from "./appContext";
+import { TypeProduct } from "./appContext";
 
 interface ProvidersProps {
   children: ReactNode
 }
 
 const Provider: React.FC<ProvidersProps> = ({children}: ProvidersProps) => {
-  const [product, setProduct] = useState<ProductsType[]>([]);
+  const [products, setProducts] = useState<TypeProduct[]>([]);
 
   const value: MyContextType = {
-    product,
-    setProduct
+    products,
+    setProducts
   }
 
   return (

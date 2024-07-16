@@ -1,13 +1,17 @@
-import { ReactElement } from "react";
+import { ReactElement, useContext } from "react";
 import { Container, NumberProducts, RiShoppingCart2FillIcons,
   ProductsKart, TitleKart, PurchaseButton, DivPrice, DivPurchaseButton,
   DivTotal, Total, TotalText, ProductDetails, DivDetails,
   ImgProduct, TitleProduct, PriceProduct, RemoveProductButton } from "./styles";
+import AppContext, { MyContextType } from "../../context/appContext";
 
 const img = '/assets/images/nps.jpg';
 
 
 const ShoppingKart: React.FC = (): ReactElement => {
+  const products: MyContextType | undefined = useContext<MyContextType | undefined>(AppContext);
+  console.log(products);
+
   return (
     <Container>
       <RiShoppingCart2FillIcons />
