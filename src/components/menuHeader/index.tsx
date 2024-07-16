@@ -20,7 +20,7 @@ const MenuHeader: React.FC<MenuProps> = ({ isActive, toggleActive }: MenuProps):
   const appMode: string = import.meta.env.VITE_APP_MODE;
   const localApp: string = import.meta.env.VITE_APP_LOCAL_APP;
   const webApp: string = import.meta.env.VITE_APP_WEB_APP;
-
+ 
   const [openModal, setOpenModal] = useState<string | null>(null);
   const [modalMessage, setModalMessage] = useState<string>('');
 
