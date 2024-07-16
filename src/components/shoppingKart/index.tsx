@@ -1,13 +1,34 @@
-import { ReactElement, useContext } from "react";
+import { ReactElement, useContext, useState } from "react";
 import { Container, NumberProducts, RiShoppingCart2FillIcons,
   ProductsKart, TitleKart, PurchaseButton, DivPrice, DivPurchaseButton,
   DivTotal, Total, TotalText, ProductDetails, DivDetails,
   ImgProduct, TitleProduct, PriceProduct, RemoveProductButton } from "./styles";
 import AppContext, { MyContextType } from "../../context/appContext";
 import formatCurrency from "../../utils/formatCurrency";
+import ModalMessage from "../modalMessage";
+
+type OpenModalType = {
+  (modalName: string, message: string): void
+}
+
+type CloseModal = {
+  (): void;
+}
 
 const ShoppingKart: React.FC = (): ReactElement => {
   const context: MyContextType | undefined = useContext(AppContext);
+
+  const [openModal, setOpenModal] = useState<string | null>();
+  const [modalMessage, setModalMessage] = useState<string>('');
+
+  const openModalHandler: OpenModalType = (modalName: string, message: string) => {
+    setOpenModal(modalName);
+    setModalMessage(message);
+  }
+
+  const closeModalHandler: CloseModal = () => {
+    setOpenModal(null);
+  }
 
   if (!context) {
     return <></>;
@@ -45,7 +66,7 @@ const ShoppingKart: React.FC = (): ReactElement => {
         ))}
 
         <DivPurchaseButton>
-          <PurchaseButton>Finalizar Pedido</PurchaseButton>
+          <PurchaseButton onClick={() => openModalHandler('modalMessage', 'Gateway de pagamento não configurado. Aguarde.')}>Finalizar Pedido</PurchaseButton>
         </DivPurchaseButton>
 
         <DivPrice>
@@ -55,6 +76,8 @@ const ShoppingKart: React.FC = (): ReactElement => {
           </DivTotal>
         </DivPrice>
       </ProductsKart>
+
+      <ModalMessage isOpen={openModal === 'modalMessage'} onClose={closeModalHandler} message={modalMessage} />
     </Container>
   )
 }
