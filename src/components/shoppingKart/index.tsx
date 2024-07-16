@@ -15,6 +15,8 @@ const ShoppingKart: React.FC = (): ReactElement => {
 
   const { products, setProducts } = context;
 
+  const showShoppingCart: "showCart" | "" = products.length > 0 ? 'showCart' : '';
+
   const handleRemoveProducts: (id: string) => void = (id: string) => {
     setProducts(previousProduct => previousProduct.filter(product => product.id !== id));
   }
@@ -24,7 +26,7 @@ const ShoppingKart: React.FC = (): ReactElement => {
   },0);
 
   return (
-    <Container>
+    <Container className={showShoppingCart}>
       <RiShoppingCart2FillIcons />
       <NumberProducts>{products.length}</NumberProducts>
 
@@ -49,7 +51,7 @@ const ShoppingKart: React.FC = (): ReactElement => {
         <DivPrice>
           <DivTotal>
             <TotalText>TOTAL:</TotalText>
-            <Total>{totalPrice}</Total>
+            <Total>{`${formatCurrency(totalPrice, 'BRL')}`}</Total>
           </DivTotal>
         </DivPrice>
       </ProductsKart>

@@ -4,6 +4,7 @@ import { RiShoppingCart2Fill } from "react-icons/ri";
 export const Container = styled.div`
   padding: 5px;
   position: relative;
+  display: none;
 
   &.showCart {
     display: block;
