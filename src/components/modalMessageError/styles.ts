@@ -8,7 +8,7 @@ export const ModalBackground = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 99999;
 `;
 
 export const ModalContent = styled.div`

@@ -87,6 +87,11 @@ export const ProductsKart = styled.div`
   right: 4px;
   background-color: #fff;
   padding: 15px 0;
+
+  @media (max-width: 840px) {
+    right: -90px;
+  }
+
 `;
 
 export const TitleKart = styled.h4`

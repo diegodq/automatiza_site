@@ -64,6 +64,8 @@ const ContactForm: React.FC = (): ReactElement => {
     .then(response => response.json())
     .then(() => openModalHandler('contactModalMessage', 'Sua mensagem foi enviada e responderemos o mais breve possível.'))
     .catch(() => openModalHandler('contactModalMessage', 'Algo de errado aconteceu. Por favor, tente mais tarde.'));
+
+    console.log(appMode == 'development' ? localAddress + '/contact-us' : webAddress + '/contact-us');
   }
 
   return (
