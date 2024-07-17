@@ -1,4 +1,4 @@
-import { FaPhoneAlt } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa6';
 import { IoMdMailOpen } from 'react-icons/io';
 import { MdLocationPin } from 'react-icons/md';
 import styled from 'styled-components';
@@ -57,7 +57,7 @@ export const MailTo = styled.a`
   }
 `;
 
-export const Phone = styled.a`
+export const Whatsapp = styled.a`
   display: flex;
   align-items: center;
   font: .9rem bahnschriftRegular, sans-serif;
@@ -70,7 +70,7 @@ export const MdLocationPinIcon = styled(MdLocationPin)`
   margin-right: 5px;
 `;
 
-export const FaPhoneAltIcon = styled(FaPhoneAlt)`
+export const FaWhatsappIcon = styled(FaWhatsapp)`
   font-size: 18px;
   margin-right: 5px;
 `;

@@ -1,6 +1,6 @@
 import React, {ReactElement, useEffect} from 'react';
 import { Container, Div, DivTitle, LogoFooter, DescriptionCompanyFooter, Ul, Nav,
-   Li, LinkSocial, QuickLink,SocialDiv,Address, MailTo, Phone,
+   Li, LinkSocial, QuickLink,SocialDiv,Address, MailTo, Whatsapp,
    MdLocationPinIcon, FaPhoneAltIcon, IoMdMailOpenIcon, FaChevronRightIcon,
    UlInformation, LiInformation} from './styles.ts'
 import {FaFacebook} from 'react-icons/fa';
@@ -50,8 +50,8 @@ const Footer: React.FC = (): ReactElement => {
 
         <UlInformation>
           <LiInformation> <Address><MdLocationPinIcon /> Edifício Easy - R. das Pitangueiras,<br /> 5/6 - Águas Claras.</Address> </LiInformation>
-          <LiInformation> <Phone href='tel:6199999999'> <FaPhoneAltIcon />(61) 9999-9999</Phone> </LiInformation>
-          <LiInformation> <MailTo href='mailto:contato@example.com'> <IoMdMailOpenIcon />contato@example.com</MailTo> </LiInformation>
+          <LiInformation> <Whatsapp href='https://wa.me/5561992437225?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20da%20Automatiza%20F%C3%A1cil.'> <FaPhoneAltIcon />(61) 9.9243-7225</Whatsapp> </LiInformation>
+          <LiInformation> <MailTo href='mailto:contato@automatizafacil.com.br'> <IoMdMailOpenIcon />contato@automatizafacil.com.br</MailTo> </LiInformation>
         </UlInformation>
       </Div>
 

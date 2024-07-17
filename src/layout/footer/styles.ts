@@ -113,7 +113,7 @@ export const MailTo = styled.a`
    text-decoration: none;
 `;
 
-export const Phone = styled.a`
+export const Whatsapp = styled.a`
    display: flex;
    align-items: center;
    font: 1.1rem bahnschriftRegular, sans-serif;
