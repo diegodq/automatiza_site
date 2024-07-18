@@ -40,7 +40,7 @@ const Footer: React.FC = (): ReactElement => {
             <Li> <QuickLink href="#about"> <FaChevronRightIcon />Quem Somos</QuickLink> </Li>
             <Li> <QuickLink href="#solutions"> <FaChevronRightIcon />Soluções</QuickLink> </Li>
             <Li> <QuickLink href="#contact"> <FaChevronRightIcon />Contato</QuickLink> </Li>
-            <Li> <QuickLink target="blank" href="https://app.automatizafacil.com.br"> <FaChevronRightIcon />Área do Cliente</QuickLink> </Li>
+            <Li> <QuickLink target="_blank" href="https://app.automatizafacil.com.br"> <FaChevronRightIcon />Área do Cliente</QuickLink> </Li>
           </Ul>
         </Nav>
       </Div>
