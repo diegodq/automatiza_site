@@ -1,30 +1,13 @@
-import React, {ReactElement, useEffect, useState} from 'react';
+import React, {ReactElement, useEffect} from 'react';
 import { Container, SocialMedia, Link, MailTo, Whatsapp, Address, MdLocationPinIcon, FaWhatsappIcon,
    IoMdMailOpenIcon, Ul, Li } from './styles';
 import {FaFacebook, FaLinkedin} from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import ModalMessage from '../../components/modalMessage';
-
-type openModalType = {
-  (modalName: string, message: string): void
-}
-
-type CloseModal = {
-  (): void;
-}
+import useModal from '../../utils/customHooks/useModal';
 
 const UpHeader: React.FC = (): ReactElement => {
-  const[openModal, setOpenModal] = useState<string | null>(null);
-  const[modalMessage, setModalMessage] = useState<string>('');
-
-  const openModalHandler: openModalType = (modalName: string, message: string): void => {
-    setOpenModal(modalName);
-    setModalMessage(message);
-  }
-
-  const closeModalHandler: CloseModal = (): void => {
-    setOpenModal(null);
-  }
+  const {openModal, modalMessage, openModalHandler, closeModalHandler} = useModal();
 
   useEffect(() => {
     const listLinks: NodeListOf<Element> = document.querySelectorAll('.linksSocial');
@@ -35,7 +18,8 @@ const UpHeader: React.FC = (): ReactElement => {
         openModalHandler('modalMessage', 'Aguarde. Em breve nossas redes sociais estarão funcionando.');
       })
     });
-  }, []);
+  }, [openModal, modalMessage, openModalHandler, closeModalHandler]);
+
   return (
     <Container>
       <Ul>
