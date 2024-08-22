@@ -1,5 +1,5 @@
 import Modal from '../../components/modal';
-import { Container, TitleSection, Div, DivAboutUs, H4, P, DivVideo, ImgVideo,
+import { Container, TitleSection, Div, DivAboutUs, P, DivVideo, ImgVideo,
    ButtonPlay, ContactButton, IoMdPlayIcon } from './styles';
 import React, {ReactElement, useState} from 'react';
 
@@ -30,8 +30,11 @@ const AboutUs: React.FC = (): ReactElement => {
 
       <DivAboutUs>
         <Div>
-          <H4>Tornando o varejo ainda mais simples</H4>
-          <P>Somos profissionais que acreditam que a tecnologia deve ser um aliado e não um obstáculo para o sucesso em qualquer setor. O objetivo da AUTOMATIZA FÁCIL é reduzir rotinas burocráticas e o excesso de planilhas, criando micros serviços independentes, intuitivos e autônomos, tornando o varejo simples ainda mais simples.</P>
+          {/* <H4>Tornando o varejo ainda mais simples</H4> */}
+          <P>Somos uma empresa que desmistifica a tecnologia para seus clientes transformando os obstáculos em operações rotineiras automatizadas.
+            O objetivo da AUTOMATIZA FÁCIL é maximizar a produtividade dos gestores e colaboradores reduzindo rotinas burocráticas,
+            transformando planilhas manuais em dashboards automatizados, possibilitando uma visão sistêmica do negócio através de ferramentas
+            simples e intuitivas . Automatize sempre com a AUTOMATIZA FÁCIL</P>
           <ContactButton href="#contact">Contate-nos</ContactButton>
         </Div>
 

@@ -10,14 +10,17 @@ interface Images {
   modalHandler: string;
 }
 
+// {id: '2', image: '/assets/images/carousel/app_collector.jpg', title: 'App Coletor de Dados',
+//   description: 'O app Meu Coletor de Dados permite transformar o seu smartphone em um equipamento para a coleta de dados.',
+//   modalHandler: 'collectorModal'},
+
 const images: Images[] = [
   {id: '1', image: '/assets/images/carousel/nps_carousel.jpg', title: 'Pesquisa de Satisfação',
   description: 'Conheça o seu cliente e veja o que ele pensa da sua empresa e como está sendo a experiência com o seus produtos ou serviços.',
   modalHandler: 'npsModal'},
 
-  {id: '2', image: '/assets/images/carousel/app_collector.jpg', title: 'App Coletor de Dados',
-  description: 'O app Meu Coletor de Dados permite transformar o seu smartphone em um equipamento para a coleta de dados.',
-  modalHandler: 'collectorModal'},
+  {id: '2', image: '/assets/images/carousel/organization_climate_survey.jpg', title: 'Pesquisa de Clima Organizational',
+    description: 'Conheça a percepção dos colaboradores em relação ao ambiente de trabalho da sua empresa.', modalHandler: 'organizationalClimate'},
 
   {id: '3', image: '/assets/images/carousel/promoter_control.jpg', title: 'Controle de Promotores',
   description: 'Gerencie e otimize o trabalho dos promotores de vendas que atuam no seu estabelecimento.',

@@ -49,7 +49,7 @@ const Footer: React.FC = (): ReactElement => {
         <DivTitle>Informações</DivTitle>
 
         <UlInformation>
-          <LiInformation> <Address><MdLocationPinIcon /> Edifício Easy - R. das Pitangueiras,<br /> 5/6 - Águas Claras.</Address> </LiInformation>
+          <LiInformation> <Address><MdLocationPinIcon /> QUADRA 205 LOTE 01, Sala 10 - <br />ÁGUAS CLARAS - Brasília - 71.925-000</Address> </LiInformation>
           <LiInformation> <Whatsapp href='https://wa.me/5561992437225?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20da%20Automatiza%20F%C3%A1cil.'> <FaPhoneAltIcon />(61) 9.9243-7225</Whatsapp> </LiInformation>
           <LiInformation> <MailTo href='mailto:contato@automatizafacil.com.br'> <IoMdMailOpenIcon />contato@automatizafacil.com.br</MailTo> </LiInformation>
         </UlInformation>
@@ -57,7 +57,7 @@ const Footer: React.FC = (): ReactElement => {
 
       <Div>
         <LogoFooter src={LogoWhite} />
-        <DescriptionCompanyFooter>O objetivo da AUTOMATIZA FÁCIL é reduzir rotinas burocráticas e o excesso de planilhas, criando micros serviços independentes, intuitivos e autônomos, tornando o varejo simples ainda mais simples.</DescriptionCompanyFooter>
+        <DescriptionCompanyFooter>O objetivo da AUTOMATIZA FÁCIL é reduzir processos rotineiros manuais e maçantes.  Nossas ferramentas simples e descomplicadas permitirão de forma fácil e rápida a visualização dos indicadores mais relevantes do seu negócio. Automatize sempre com a AUTOMATIZA FÁCIL.</DescriptionCompanyFooter>
       </Div>
     </Container>
   )

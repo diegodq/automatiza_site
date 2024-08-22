@@ -1,7 +1,7 @@
 import React, {ReactElement, useEffect} from 'react';
 import { Container, SocialMedia, Link, MailTo, Whatsapp, Address, MdLocationPinIcon, FaWhatsappIcon,
    IoMdMailOpenIcon, Ul, Li } from './styles';
-import {FaFacebook, FaLinkedin} from "react-icons/fa";
+import {FaLinkedin} from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import ModalMessage from '../../components/modalMessage';
 import useModal from '../../utils/customHooks/useModal';
@@ -23,13 +23,12 @@ const UpHeader: React.FC = (): ReactElement => {
   return (
     <Container>
       <Ul>
-        <Li><Address><MdLocationPinIcon />Edifício Easy - R. das Pitangueiras, 5/6 - Águas Claras</Address></Li>
+        <Li><Address><MdLocationPinIcon />QUADRA 205 LOTE 01, Sala 10 - ÁGUAS CLARAS - Brasília - 71.925-000</Address></Li>
         <Li><Whatsapp href='https://wa.me/5561992437225?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20os%20servi%C3%A7os%20da%20Automatiza%20F%C3%A1cil.'><FaWhatsappIcon /> (61) 9.9243-7225</Whatsapp></Li>
         <Li><MailTo href='mailto:contato@automatizafacil.com.br'><IoMdMailOpenIcon />contato@automatizafacil.com.br</MailTo></Li>
       </Ul>
 
       <SocialMedia>
-        <Link className='linksSocial' target='_blank' href='#'><FaFacebook /></Link>
         <Link className='linksSocial' target='_blank' href='#'><AiFillInstagram /></Link>
         <Link className='linksSocial' target='_blank' href='#'><FaLinkedin /></Link>
       </SocialMedia>

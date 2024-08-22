@@ -7,7 +7,9 @@ import {Container, TitleSection, SubTitleSection, Tale, TitleTale,
    AddToKartButton} from './styles.ts';
 
 import NPSImage from '/assets/images/nps.jpg';
-import collectorImage from '/assets/images/app_coletor.jpg';
+// import collectorImage from '/assets/images/app_coletor.jpg';
+import organizationalClimate from '/assets/images/organizationl_climate_survey.jpg';
+import researchPrice from '/assets/images/app_coletor.jpg';
 import promoterControl from '/assets/images/promoter_control.jpg';
 import dataClassification from '/assets/images/data_classification.jpg';
 import AppContext, { MyContextType } from '../../context/appContext.tsx';
@@ -91,10 +93,10 @@ const Solutions: React.FC = (): ReactElement => {
             </Tale>
         </DivTaleImg>
 
-        <DivTaleImg>
+        {/* <DivTaleImg>
           <TaleImg src={collectorImage} />
             <Tale>
-              <TitleTale>App Coletor de Dados</TitleTale>
+              <TitleTale>App Pesquisa de Preços</TitleTale>
 
               <TaleDescription>O app Meu Coletor de Dados permite transformar o seu smartphone em um equipamento para a coleta de dados. Com isso, você reduz custos na automação de processos de logística interna, podendo instalar mais aparelhos, se necessário.</TaleDescription>
 
@@ -109,7 +111,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={() => openModalHandler('collectorModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                <AddToKartButton onClick={(): void => addContext('002',collectorImage, 'Pesquisa de Satisfação', 190.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+                <AddToKartButton onClick={(): void => addContext('003',collectorImage, 'Pesquisa de Satisfação', 190.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
               </DivButtons>
 
 
@@ -139,6 +141,40 @@ const Solutions: React.FC = (): ReactElement => {
                 <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
                   O app Meu Coletor de Dados também proporciona alta capacidade de escala, permitindo atender operações de pequeno e grande porte.
                   O aplicativo pode ser contratado por assinatura.
+                </p>
+              </Modal>
+            </Tale>
+
+            <Badge>Em desenvolvimento</Badge>
+        </DivTaleImg> */}
+
+        <DivTaleImg>
+          <TaleImg src={organizationalClimate} />
+            <Tale>
+              <TitleTale>App Pesquisa de Clima</TitleTale>
+
+              <TaleDescription>O app Pesquisa de Clima Organizacional permite conhecer a percepção dos gestores em relação ao ambiente de trabalho da sua empresa.</TaleDescription>
+
+              <Ul>
+                <Li> <ParagraphNPS><FaCheckIcon />Entenda as reais necessidades dos seus colaboradores.</ParagraphNPS> </Li>
+                <Li> <ParagraphNPS><FaCheckIcon />Diminuição do turnover.</ParagraphNPS> </Li>
+                <Li> <ParagraphNPS><FaCheckIcon />Mensure com facilidade as habilidades técnicas e comportamentais.</ParagraphNPS> </Li>
+                <Li> <ParagraphNPS><FaCheckIcon />Gerar benefícios alinhados com as expectativas.</ParagraphNPS> </Li>
+                <Li> <ParagraphNPS><FaCheckIcon />Aumentar o engajamento dos seus colaboradores.</ParagraphNPS> </Li>
+                <Li> <ParagraphNPS><FaCheckIcon />Reter talentos.</ParagraphNPS> </Li>
+              </Ul>
+
+              <DivButtons>
+                <ReadMoreButton onClick={(): void => openModalHandler('organizationalClimate')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
+                <AddToKartButton onClick={(): void => addContext('004',organizationalClimate, 'Pesquisa de Clima Organizacional', 200.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+              </DivButtons>
+
+              <Modal isOpen={openModal === 'organizationalClimate'} onClose={closeModalHandler}>
+                <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>Pesquisa de Clima Organizacional</h1>
+                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                  O app Pesquisa de Clima Organizacional permite conhecer a percepção dos gestores em relação ao ambiente de trabalho da sua empresa.
+                  No contexto atual, conseguir medir o nível de satisfação dos colaboradores é fundamental para reter talentos, ser mais assertivo nas próximas contratações,
+                  reduzir custos e maximizar a produtividade.
                 </p>
               </Modal>
             </Tale>
@@ -199,6 +235,55 @@ const Solutions: React.FC = (): ReactElement => {
       </Div>
 
       <Div>
+      <DivTaleImg>
+          <TaleImg src={researchPrice} />
+            <Tale>
+              <TitleTale>App Pesquisa de Preços</TitleTale>
+
+              <TaleDescription>O app Meu Coletor de Dados permite transformar o seu smartphone em um equipamento para a coleta de dados. Com isso, você reduz custos na automação de processos de logística interna, podendo instalar mais aparelhos, se necessário.</TaleDescription>
+
+              <Ul>
+                <Li> <ParagraphNPS><FaCheckIcon />Faça sua pesquisa de preço online com ou sem consulta na base de dados.</ParagraphNPS> </Li>
+                <Li> <ParagraphNPS><FaCheckIcon />Marque os produtos formadores de opinião que precisem de ação imediata de precificação.</ParagraphNPS> </Li>
+                <Li> <ParagraphNPS><FaCheckIcon />Notifique o gestor de pricing.</ParagraphNPS> </Li>
+                <Li> <ParagraphNPS><FaCheckIcon />Gere arquivos com layouts personalizados para importação do seu ERP.</ParagraphNPS> </Li>
+              </Ul>
+
+              <DivButtons>
+                <ReadMoreButton onClick={() => openModalHandler('researchPrice')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
+                <AddToKartButton onClick={(): void => addContext('002',researchPrice, 'App Pesquisa de Preços', 190.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+              </DivButtons>
+
+
+              <Modal isOpen={openModal === 'researchPrice'} onClose={closeModalHandler}>
+                <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>App coletor de Dados</h1>
+                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                  O app Pesquisa de Preços permite transformar o seu smartphone em um equipamento para a coleta de dados, integrado de forma prática ao software de gestão da empresa. Com isso,
+                  você reduz custos na automação de processos de logística interna, podendo instalar em mais aparelhos, se necessário.
+                </p>
+                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                  O aplicativo permite a realização de pesquisas de preços nos concorrentes além da possibilidade de acompanhamento da movimentação de produtos. Por meio da câmera do celular,
+                  você pode selecionar produtos pelo código de barra, facilitando a movimentação a gestão do mix.
+                  Desse modo, você evita processos manuais e reduz a possibilidade de erros em seus registros.
+                </p>
+                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                  O app Pesquisa de Preços permite fazer a convocação dos operadores, atribuindo tarefas e gerenciando melhor as equipes nas rotinas de logística interna. Além disso, o aplicativo também funciona em modo offline.
+                  Assim, se a conexão de internet cair, você não precisa interromper sua operação, e pode fazer a sincronização dos dados mais tarde, quando a conexão for restabelecida.
+                  Caso haja algum tipo de falha na sincronização, o app emite uma notificação para o celular do usuário evitando informações incorretas e tomadas de decisões equivocadas.
+                </p>
+                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                  O app Pesquisa de Preço está disponível nas plataformas Android e IoS e proporciona mais agilidade e eficiência. A interface é simples e amigável, facilitando a rotina de operação.
+                </p>
+                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                  O app Pesquisa de Preços também proporciona alta capacidade de escala, permitindo atender operações de pequeno e grande porte.
+                  O aplicativo pode ser contratado por assinatura.
+                </p>
+              </Modal>
+            </Tale>
+
+            <Badge>Em desenvolvimento</Badge>
+        </DivTaleImg>
+        
         <DivTaleImg>
           <TaleImg src={dataClassification}/>
             <Tale>
@@ -216,7 +301,7 @@ const Solutions: React.FC = (): ReactElement => {
 
               <DivButtons>
                 <ReadMoreButton onClick={() => openModalHandler('dataClassificationModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                <AddToKartButton onClick={(): void => addContext('004',dataClassification, 'Pesquisa de Satisfação', 210.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+                <AddToKartButton onClick={(): void => addContext('005',dataClassification, 'Pesquisa de Satisfação', 210.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
               </DivButtons>
 
               <Modal isOpen={openModal === 'dataClassificationModal'} onClose={closeModalHandler}>
