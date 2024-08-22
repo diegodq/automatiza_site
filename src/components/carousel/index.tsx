@@ -22,11 +22,15 @@ const images: Images[] = [
   {id: '2', image: '/assets/images/carousel/organization_climate_survey.jpg', title: 'Pesquisa de Clima Organizational',
     description: 'Conheça a percepção dos colaboradores em relação ao ambiente de trabalho da sua empresa.', modalHandler: 'organizationalClimate'},
 
-  {id: '3', image: '/assets/images/carousel/promoter_control.jpg', title: 'Controle de Promotores',
+  {id: '3', image: '/assets/images/carousel/app_collector.jpg', title: 'App Pesquisa de Preços',
+    description: 'O app Pesquisa de Preços permite transformar o seu smartphone em um equipamento para a coleta de dados, integrado de forma prática ao software de gestão da empresa.',
+    modalHandler: 'collectorModal'},
+
+  {id: '4', image: '/assets/images/carousel/promoter_control.jpg', title: 'Controle de Promotores',
   description: 'Gerencie e otimize o trabalho dos promotores de vendas que atuam no seu estabelecimento.',
   modalHandler: 'promoterControlModal'},
 
-  {id: '4', image: '/assets/images/carousel/data_classification.jpg', title: 'Classificação de Produtos',
+  {id: '5', image: '/assets/images/carousel/data_classification.jpg', title: 'Classificação de Produtos',
   description: 'Mantenha o fiscal da sua empresa organizado e atualizado.', modalHandler: 'dataClassificationModal'},
 ];
 

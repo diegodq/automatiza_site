@@ -61,7 +61,7 @@ const Solutions: React.FC = (): ReactElement => {
       <TitleSection>NOSSAS SOLUÇÕES</TitleSection>
       <SubTitleSection>Conheça as soluções que desenvolvemos para facilitar a gestão e o seu dia a dia:</SubTitleSection>
 
-      <Div>
+      <Div className="rangeOne">
         <DivTaleImg>
           <TaleImg src={NPSImage} />
             <Tale>
@@ -91,9 +91,9 @@ const Solutions: React.FC = (): ReactElement => {
                 <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Utilizando a nossa ferramenta “PESQUISA DE SATISFAÇÃO-NPS”, descomplicada como a Automatiza Fácil, construa de maneira fácil e rápida a pesquisa de satisfação que mais se adeque ao seu negócio e ao seu momento e monitore em tempo real o que seus clientes pensam da sua empresa.</p>
               </Modal>
             </Tale>
-        </DivTaleImg>
+          </DivTaleImg>
 
-        {/* <DivTaleImg>
+          {/* <DivTaleImg>
           <TaleImg src={collectorImage} />
             <Tale>
               <TitleTale>App Pesquisa de Preços</TitleTale>
@@ -146,7 +146,7 @@ const Solutions: React.FC = (): ReactElement => {
             </Tale>
 
             <Badge>Em desenvolvimento</Badge>
-        </DivTaleImg> */}
+          </DivTaleImg> */}
 
         <DivTaleImg>
           <TaleImg src={organizationalClimate} />
@@ -234,13 +234,13 @@ const Solutions: React.FC = (): ReactElement => {
         </DivTaleImg>
       </Div>
 
-      <Div>
-      <DivTaleImg>
+      <Div className="rangeTwo">
+        <DivTaleImg>
           <TaleImg src={researchPrice} />
             <Tale>
               <TitleTale>App Pesquisa de Preços</TitleTale>
 
-              <TaleDescription>O app Meu Coletor de Dados permite transformar o seu smartphone em um equipamento para a coleta de dados. Com isso, você reduz custos na automação de processos de logística interna, podendo instalar mais aparelhos, se necessário.</TaleDescription>
+              <TaleDescription>O app Pesquisa de Preços permite transformar o seu smartphone em um equipamento para a coleta de dados, integrado de forma prática ao software de gestão da empresa..</TaleDescription>
 
               <Ul>
                 <Li> <ParagraphNPS><FaCheckIcon />Faça sua pesquisa de preço online com ou sem consulta na base de dados.</ParagraphNPS> </Li>
@@ -256,7 +256,7 @@ const Solutions: React.FC = (): ReactElement => {
 
 
               <Modal isOpen={openModal === 'researchPrice'} onClose={closeModalHandler}>
-                <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>App coletor de Dados</h1>
+                <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>App Pesquisa de Preços</h1>
                 <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
                   O app Pesquisa de Preços permite transformar o seu smartphone em um equipamento para a coleta de dados, integrado de forma prática ao software de gestão da empresa. Com isso,
                   você reduz custos na automação de processos de logística interna, podendo instalar em mais aparelhos, se necessário.
@@ -283,7 +283,7 @@ const Solutions: React.FC = (): ReactElement => {
 
             <Badge>Em desenvolvimento</Badge>
         </DivTaleImg>
-        
+
         <DivTaleImg>
           <TaleImg src={dataClassification}/>
             <Tale>

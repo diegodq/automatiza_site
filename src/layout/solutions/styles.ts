@@ -81,7 +81,7 @@ export const Li = styled.li`
 `;
 
 export const Price = styled.span`
-  
+
 `;
 
 export const ReadMoreButton = styled.button`
