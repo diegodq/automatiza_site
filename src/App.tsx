@@ -11,8 +11,15 @@ import Contact from './layout/contact/index.tsx';
 import Statistic from './layout/statistic/index.tsx';
 import AboutUs from './layout/aboutUs/index.tsx';
 import Carousel from './components/carousel/index.tsx';
+import Maintenance from './layout/maintenance/index.tsx';
 
 const App: React.FC = (): ReactElement => {
+  const isMaintenanceMode: boolean = import.meta.env.VITE_APP_MAINTENANCE_MODE === 'true';
+
+  if(isMaintenanceMode) {
+    return <Maintenance />;
+  }
+
   return (
     <>
       <UpHeader />
