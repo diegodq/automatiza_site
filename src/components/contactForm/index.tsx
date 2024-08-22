@@ -64,8 +64,6 @@ const ContactForm: React.FC = (): ReactElement => {
     .then(response => response.json())
     .then(() => openModalHandler('contactModalMessage', 'Sua mensagem foi enviada e responderemos o mais breve possível.'))
     .catch(() => openModalHandler('contactModalMessage', 'Algo de errado aconteceu. Por favor, tente mais tarde.'));
-
-    console.log(appMode == 'development' ? localAddress + '/contact-us' : webAddress + '/contact-us');
   }
 
   return (
@@ -83,13 +81,13 @@ const ContactForm: React.FC = (): ReactElement => {
       </DivInput>
 
       <DivInput>
-        <Input className={errors?.phone && 'input_error'} type='tel' placeholder='Telefone:' onKeyUp={handleKeyUp}
+        <Input className={errors?.phone && 'input_error'} type='tel' placeholder='Telefone: *' onKeyUp={handleKeyUp}
         {...register('phone', {required: true})} />
         {errors?.phone?.type==='required' && <ErrorMessage>*Este campo é obrigatório</ErrorMessage>}
       </DivInput>
 
       <DivInput>
-        <TextArea className={errors?.message && 'text_area_error'} placeholder='Mensagem'
+        <TextArea className={errors?.message && 'text_area_error'} placeholder='Mensagem: *'
         {...register('message', {required: true})}></TextArea>
         {errors?.message?.type==='required' && <ErrorMessage>*Este campo é obrigatório</ErrorMessage>}
       </DivInput>

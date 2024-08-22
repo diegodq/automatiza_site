@@ -64,171 +64,116 @@ const Solutions: React.FC = (): ReactElement => {
       <Div className="rangeOne">
         <DivTaleImg>
           <TaleImg src={NPSImage} />
-            <Tale>
-              <TitleTale>Pesquisa de Satisfação</TitleTale>
+          <Tale>
+            <TitleTale>Pesquisa de Satisfação</TitleTale>
 
-              <TaleDescription>Conheça o seu cliente e veja o que ele pensa da sua empresa e como está sendo a experiência com o seus produtos ou serviços.</TaleDescription>
+            <TaleDescription>Conheça o seu cliente e veja o que ele pensa da sua empresa e como está sendo a experiência com o seus produtos ou serviços.</TaleDescription>
 
-              <Ul>
-                <Li> <ParagraphNPS><FaCheckIcon />Desenvolva pesquisas personalizadas para o seu negócio.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Defina a ordem e obrigatoriedade das perguntas e respostas.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Informações em tempo real na palma da mão.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Acesso via QrCode</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Baixo custo de investimento e retorno garantido.</ParagraphNPS> </Li>
-              </Ul>
+            <Ul>
+              <Li> <ParagraphNPS><FaCheckIcon />Desenvolva pesquisas personalizadas para o seu negócio.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Defina a ordem e obrigatoriedade das perguntas e respostas.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Informações em tempo real na palma da mão.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Acesso via QrCode</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Baixo custo de investimento e retorno garantido.</ParagraphNPS> </Li>
+            </Ul>
 
-              <DivButtons>
-                <ReadMoreButton onClick={(): void => openModalHandler('npsModal')}>Saiba mais<FaChevronRightIcon /> </ReadMoreButton>
-                <AddToKartButton onClick={(): void => addContext('001',NPSImage, 'Pesquisa de Satisfação', 180.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
-              </DivButtons>
+            <DivButtons>
+              <ReadMoreButton onClick={(): void => openModalHandler('npsModal')}>Saiba mais<FaChevronRightIcon /> </ReadMoreButton>
+              <AddToKartButton onClick={(): void => addContext('001',NPSImage, 'Pesquisa de Satisfação', 180.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+            </DivButtons>
 
-              <Modal isOpen={openModal === 'npsModal'} onClose={closeModalHandler}>
-                <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>Pesquisa de Satisfação - NPS</h1>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>A Automatiza Fácil, pensando no fortalecimento contínuo da sua marca desenvolveu uma aplicação que ouve o seu cliente. Assim como você, nos da Automatiza Fácil também sabemos a importância da informação no dia a dia.</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Conhecer o nosso cliente, o que ele pensa de nós e como está sendo sua experiência com os nossos produtos e serviços é de indiscutível relevância. Além de nos diferenciar dos nossos concorrentes também permite um melhor relacionamento com o cliente.</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Quando ouvimos nossos clientes mostramos o quanto nos importamos com eles e o quanto a sua satisfação é importante para a empresa. Além dos pontos já relatados, é uma ótima estratégia para a empresa obter informações que permitam aprimorar seus produtos e serviços. Conhecer o seu cliente é fortalecer a cada dia sua marca, seus produtos e serviços.</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Com base nestas premissas, desenvolvemos uma ferramenta simples, flexível e acessível a qualquer tempo e de qualquer lugar.</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Utilizando a nossa ferramenta “PESQUISA DE SATISFAÇÃO-NPS”, descomplicada como a Automatiza Fácil, construa de maneira fácil e rápida a pesquisa de satisfação que mais se adeque ao seu negócio e ao seu momento e monitore em tempo real o que seus clientes pensam da sua empresa.</p>
-              </Modal>
-            </Tale>
-          </DivTaleImg>
-
-          {/* <DivTaleImg>
-          <TaleImg src={collectorImage} />
-            <Tale>
-              <TitleTale>App Pesquisa de Preços</TitleTale>
-
-              <TaleDescription>O app Meu Coletor de Dados permite transformar o seu smartphone em um equipamento para a coleta de dados. Com isso, você reduz custos na automação de processos de logística interna, podendo instalar mais aparelhos, se necessário.</TaleDescription>
-
-              <Ul>
-                <Li> <ParagraphNPS><FaCheckIcon />Faça a contagem dos produtos através de inventários com e sem consulta.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Faça contagens dos produtos pelo tablete, celular, ou coletor de dados.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Configure o layout exigido pelo seu ERP de forma simples e dinâmico.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Layouts dinâmicos para importação e exportação.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Trabalhe com vários dispositivos em um mesmo inventário.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Adquira a licença temporária por dispositivo e pague de acordo com a sua demanda.</ParagraphNPS> </Li>
-              </Ul>
-
-              <DivButtons>
-                <ReadMoreButton onClick={() => openModalHandler('collectorModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                <AddToKartButton onClick={(): void => addContext('003',collectorImage, 'Pesquisa de Satisfação', 190.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
-              </DivButtons>
-
-
-              <Modal isOpen={openModal === 'collectorModal'} onClose={closeModalHandler}>
-                <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>App coletor de Dados</h1>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
-                  O app Meu Coletor de Dados permite transformar o seu smartphone em um equipamento para a coleta de dados, integrado de forma nativa aos módulos de Estoque e Custos,
-                  e de Compras e Faturamento. Com isso, você reduz custos na automação de processos de logística interna, podendo instalar mais aparelhos, se necessário.
-                </p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
-                  O aplicativo permite acompanhar a movimentação de produtos desde a chegada até a saída dos itens. Por meio da câmera do celular,
-                  você pode bipar produtos pelo código de barra ou QR Code na etiqueta dos itens ou das caixas, facilitando a movimentação do seu estoque de itens.
-                  Desse modo, você evita processos manuais e reduz a possibilidade de erros em seus registros.
-                </p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
-                  O app Meu Coletor de Dados permite fazer a convocação dos operadores, atribuindo tarefas e gerenciando melhor as equipes nas rotinas de logística interna.
-                  Além disso, o aplicativo também funciona em modo offline.
-                  Assim, se a conexão de internet cair, você não precisa interromper sua operação, e pode fazer a sincronização dos dados mais tarde, quando a conexão for restabelecida.
-                </p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
-                  E caso haja algum tipo de falha na sincronização, o app emite uma notificação para o celular do usuário. Assim, você nunca fica sem as informações necessárias para sua operação.
-                </p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
-                  O app Meu Coletor de Dados está disponível na plataforma Android e IoS proporciona mais agilidade e eficiência em processos de logística interna.
-                  A interface é simples e amigável, facilitando a rotina de operação.
-                </p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
-                  O app Meu Coletor de Dados também proporciona alta capacidade de escala, permitindo atender operações de pequeno e grande porte.
-                  O aplicativo pode ser contratado por assinatura.
-                </p>
-              </Modal>
-            </Tale>
-
-            <Badge>Em desenvolvimento</Badge>
-          </DivTaleImg> */}
+            <Modal isOpen={openModal === 'npsModal'} onClose={closeModalHandler}>
+              <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>Pesquisa de Satisfação - NPS</h1>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>A Automatiza Fácil, pensando no fortalecimento contínuo da sua marca desenvolveu uma aplicação que ouve o seu cliente. Assim como você, nos da Automatiza Fácil também sabemos a importância da informação no dia a dia.</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Conhecer o nosso cliente, o que ele pensa de nós e como está sendo sua experiência com os nossos produtos e serviços é de indiscutível relevância. Além de nos diferenciar dos nossos concorrentes também permite um melhor relacionamento com o cliente.</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Quando ouvimos nossos clientes mostramos o quanto nos importamos com eles e o quanto a sua satisfação é importante para a empresa. Além dos pontos já relatados, é uma ótima estratégia para a empresa obter informações que permitam aprimorar seus produtos e serviços. Conhecer o seu cliente é fortalecer a cada dia sua marca, seus produtos e serviços.</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Com base nestas premissas, desenvolvemos uma ferramenta simples, flexível e acessível a qualquer tempo e de qualquer lugar.</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Utilizando a nossa ferramenta “PESQUISA DE SATISFAÇÃO-NPS”, descomplicada como a Automatiza Fácil, construa de maneira fácil e rápida a pesquisa de satisfação que mais se adeque ao seu negócio e ao seu momento e monitore em tempo real o que seus clientes pensam da sua empresa.</p>
+            </Modal>
+          </Tale>
+        </DivTaleImg>
 
         <DivTaleImg>
           <TaleImg src={organizationalClimate} />
-            <Tale>
-              <TitleTale>App Pesquisa de Clima</TitleTale>
+          <Tale>
+            <TitleTale>App Pesquisa de Clima</TitleTale>
 
-              <TaleDescription>O app Pesquisa de Clima Organizacional permite conhecer a percepção dos gestores em relação ao ambiente de trabalho da sua empresa.</TaleDescription>
+            <TaleDescription>O app Pesquisa de Clima Organizacional permite conhecer a percepção dos gestores em relação ao ambiente de trabalho da sua empresa.</TaleDescription>
 
-              <Ul>
-                <Li> <ParagraphNPS><FaCheckIcon />Entenda as reais necessidades dos seus colaboradores.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Diminuição do turnover.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Mensure com facilidade as habilidades técnicas e comportamentais.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Gerar benefícios alinhados com as expectativas.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Aumentar o engajamento dos seus colaboradores.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Reter talentos.</ParagraphNPS> </Li>
-              </Ul>
+            <Ul>
+              <Li> <ParagraphNPS><FaCheckIcon />Entenda as reais necessidades dos seus colaboradores.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Diminuição do turnover.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Mensure com facilidade as habilidades técnicas e comportamentais.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Gerar benefícios alinhados com as expectativas.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Aumentar o engajamento dos seus colaboradores.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Reter talentos.</ParagraphNPS> </Li>
+            </Ul>
 
-              <DivButtons>
-                <ReadMoreButton onClick={(): void => openModalHandler('organizationalClimate')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                <AddToKartButton onClick={(): void => addContext('004',organizationalClimate, 'Pesquisa de Clima Organizacional', 200.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
-              </DivButtons>
+            <DivButtons>
+              <ReadMoreButton onClick={(): void => openModalHandler('organizationalClimate')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
+              <AddToKartButton onClick={(): void => addContext('004',organizationalClimate, 'Pesquisa de Clima Organizacional', 200.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+            </DivButtons>
 
-              <Modal isOpen={openModal === 'organizationalClimate'} onClose={closeModalHandler}>
-                <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>Pesquisa de Clima Organizacional</h1>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
-                  O app Pesquisa de Clima Organizacional permite conhecer a percepção dos gestores em relação ao ambiente de trabalho da sua empresa.
-                  No contexto atual, conseguir medir o nível de satisfação dos colaboradores é fundamental para reter talentos, ser mais assertivo nas próximas contratações,
-                  reduzir custos e maximizar a produtividade.
-                </p>
-              </Modal>
-            </Tale>
+            <Modal isOpen={openModal === 'organizationalClimate'} onClose={closeModalHandler}>
+              <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>Pesquisa de Clima Organizacional</h1>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>
+                O app Pesquisa de Clima Organizacional permite conhecer a percepção dos gestores em relação ao ambiente de trabalho da sua empresa.
+                No contexto atual, conseguir medir o nível de satisfação dos colaboradores é fundamental para reter talentos, ser mais assertivo nas próximas contratações,
+                reduzir custos e maximizar a produtividade.
+              </p>
+            </Modal>
+          </Tale>
 
-            <Badge>Em desenvolvimento</Badge>
+          <Badge>Em desenvolvimento</Badge>
         </DivTaleImg>
 
         <DivTaleImg>
           <TaleImg src={promoterControl} />
-            <Tale>
-              <TitleTale>Controle de Promotores</TitleTale>
+          <Tale>
+            <TitleTale>Controle de Promotores</TitleTale>
 
-              <TaleDescription>O aplicativo de controle de promotores de produto de supermercados é a nossa ferramenta projetada para gerenciar e otimizar o trabalho dos promotores de vendas que atuam no seu estabelecimento.</TaleDescription>
+            <TaleDescription>O aplicativo de controle de promotores de produto de supermercados é a nossa ferramenta projetada para gerenciar e otimizar o trabalho dos promotores de vendas que atuam no seu estabelecimento.</TaleDescription>
 
-              <Ul>
-                <Li> <ParagraphNPS><FaCheckIcon />Gestão de Tarefas e Rotinas.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Relatórios e Coleta de Dados.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Check-in e Check-out.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Comunicação entre Promotores e Gerentes.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Feedback e Avaliações.</ParagraphNPS> </Li>
-                <Li> <ParagraphNPS><FaCheckIcon />Controle de Inventário.</ParagraphNPS> </Li>
-              </Ul>
+            <Ul>
+              <Li> <ParagraphNPS><FaCheckIcon />Gestão de Tarefas e Rotinas.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Relatórios e Coleta de Dados.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Check-in e Check-out.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Comunicação entre Promotores e Gerentes.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Feedback e Avaliações.</ParagraphNPS> </Li>
+              <Li> <ParagraphNPS><FaCheckIcon />Controle de Inventário.</ParagraphNPS> </Li>
+            </Ul>
 
-              <DivButtons>
-                <ReadMoreButton onClick={(): void => openModalHandler('promoterControlModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
-                <AddToKartButton onClick={(): void => addContext('003',promoterControl, 'Pesquisa de Satisfação', 200.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
-              </DivButtons>
+            <DivButtons>
+              <ReadMoreButton onClick={(): void => openModalHandler('promoterControlModal')}>Saiba mais<FaChevronRightIcon /></ReadMoreButton>
+              <AddToKartButton onClick={(): void => addContext('003',promoterControl, 'Pesquisa de Satisfação', 200.00)}>Adicionar ao Carrinho<FaChevronRightIcon /> </AddToKartButton>
+            </DivButtons>
 
-              <Modal isOpen={openModal === 'promoterControlModal'} onClose={closeModalHandler}>
-                <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>Controle de Promotores</h1>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Um aplicativo de controle de promotores de
-                  produto de supermercados é a nossa ferramenta projetada para gerenciar e otimizar o trabalho dos promotores de
-                  vendas que atuam no seu estabelecimento. Esses promotores são responsáveis por diversas atividades, como
-                  organizar e exibir produtos, realizar degustações, coletar informações sobre as vendas e interagir com os
-                  clientes. Nosso aplicativo facilita essas tarefas e oferece várias funcionalidades importantes, como:</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>2. Gestão de Tarefas e Rotinas: Permite aos
-                  gerentes designar tarefas específicas aos promotores e monitorar a execução dessas tarefas em tempo real.
-                  Os promotores podem acessar suas listas de tarefas diárias diretamente no aplicativo.</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>3. Check-in e Check-out: Utiliza geolocalização para registrar
-                  a chegada e saída dos promotores nos supermercados, garantindo que eles estão cumprindo suas horas de trabalho e visitando os locais designados.</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>4. Auditorias e Inspeções: O aplicativo pode ser usado para realizar auditorias no ponto de venda,
-                  verificando a disposição dos produtos, preços, validade e outras informações relevantes.</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>5. Comunicação: Facilita a comunicação entre gerentes e promotores através de mensagens, notificações e alertas.
-                  Isso ajuda a resolver problemas rapidamente e a garantir que todos estejam alinhados com os objetivos da promoção.</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>6. Treinamento e Suporte: Oferece módulos de treinamento e recursos de suporte para ajudar os promotores a
-                  desempenharem suas funções de maneira mais eficiente e informada.</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>7. Feedback e Avaliações: Os promotores podem fornecer feedback sobre suas experiências e desempenho,
-                  e os gerentes podem avaliar o desempenho dos promotores, identificando áreas que precisam de melhorias.</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>8. Controle de Inventário: Ajuda a monitorar o estoque de produtos no ponto de venda, garantindo que os promotores
-                  possam solicitar reposições antes que os produtos acabem.</p>
-                <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Essas funcionalidades ajudam a aumentar a eficiência operacional, melhorar a precisão dos dados coletados,
-                  otimizar a alocação de recursos e, em última análise, aumentar as vendas e a satisfação do cliente no ambiente de supermercado.</p>
-              </Modal>
-            </Tale>
+            <Modal isOpen={openModal === 'promoterControlModal'} onClose={closeModalHandler}>
+              <h1 style={{textAlign: 'center', font: '1.2rem Arial, sans-serif', marginBottom: '15px'}}>Controle de Promotores</h1>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Um aplicativo de controle de promotores de
+                produto de supermercados é a nossa ferramenta projetada para gerenciar e otimizar o trabalho dos promotores de
+                vendas que atuam no seu estabelecimento. Esses promotores são responsáveis por diversas atividades, como
+                organizar e exibir produtos, realizar degustações, coletar informações sobre as vendas e interagir com os
+                clientes. Nosso aplicativo facilita essas tarefas e oferece várias funcionalidades importantes, como:</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>2. Gestão de Tarefas e Rotinas: Permite aos
+                gerentes designar tarefas específicas aos promotores e monitorar a execução dessas tarefas em tempo real.
+                Os promotores podem acessar suas listas de tarefas diárias diretamente no aplicativo.</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>3. Check-in e Check-out: Utiliza geolocalização para registrar
+                a chegada e saída dos promotores nos supermercados, garantindo que eles estão cumprindo suas horas de trabalho e visitando os locais designados.</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>4. Auditorias e Inspeções: O aplicativo pode ser usado para realizar auditorias no ponto de venda,
+                verificando a disposição dos produtos, preços, validade e outras informações relevantes.</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>5. Comunicação: Facilita a comunicação entre gerentes e promotores através de mensagens, notificações e alertas.
+                Isso ajuda a resolver problemas rapidamente e a garantir que todos estejam alinhados com os objetivos da promoção.</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>6. Treinamento e Suporte: Oferece módulos de treinamento e recursos de suporte para ajudar os promotores a
+                desempenharem suas funções de maneira mais eficiente e informada.</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>7. Feedback e Avaliações: Os promotores podem fornecer feedback sobre suas experiências e desempenho,
+                e os gerentes podem avaliar o desempenho dos promotores, identificando áreas que precisam de melhorias.</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>8. Controle de Inventário: Ajuda a monitorar o estoque de produtos no ponto de venda, garantindo que os promotores
+                possam solicitar reposições antes que os produtos acabem.</p>
+              <p style={{font: '1rem Arial, sans-serif', textIndent: '1em'}}>Essas funcionalidades ajudam a aumentar a eficiência operacional, melhorar a precisão dos dados coletados,
+                otimizar a alocação de recursos e, em última análise, aumentar as vendas e a satisfação do cliente no ambiente de supermercado.</p>
+            </Modal>
+          </Tale>
 
             <Badge>Em desenvolvimento</Badge>
         </DivTaleImg>

@@ -12,12 +12,10 @@ export const ParagraphNPS = styled.p`
 
 export const Div = styled.div`
   display: flex;
-  justify-content: space-around;
-  margin-top: 35px;
-  padding-left: 10px;
-  padding-right: 10px;
+  justify-content: center;
+  margin-top: 20px;
 
-  @media (max-width: 1330px) {
+  @media (max-width: 1370px) {
     flex-direction: column;
     align-items: center;
   }
@@ -26,8 +24,13 @@ export const Div = styled.div`
 export const DivTaleImg = styled.div`
   position: relative;
 
-  @media (max-width: 1330px) {
+  & + & {
+    margin-left: 20px;
+  }
+
+  @media (max-width: 1370px) {
     margin-top: 15px;
+    margin-left: 20px;
   }
 `;
 

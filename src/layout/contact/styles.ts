@@ -19,3 +19,8 @@ export const SubTitleSection = styled.span`
   padding-left: 20px;
   padding-right: 35px;
 `;
+
+export const Paragraph = styled.p`
+  text-align: center;
+  font: 1rem bahnschriftRegular, sans-serif;
+`;
